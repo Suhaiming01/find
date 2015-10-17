@@ -41,7 +41,7 @@ a:active {
 <!----header-!-->
 <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
-    <td><img src="images/ioioe.png" alt="" width="1274" height="210" /></td>
+    <td><img src="images/iuu.png" alt="" width="1274" height="200" /></td>
   </tr>
   <tr>     <td bgcolor="#FFFFFF">
     <nav class="navbar navbar-default">
@@ -91,6 +91,8 @@ a:active {
     </div>
     <ul class="nav nav-pills">
       <img src="images/add1.jpg" alt="" width="181" height="48" />
-      <img src="images/add.jpg" alt="" width="176" height="49" />
+      <a href="add_menu.php"><img src="images/add.jpg" alt="" width="176" height="49" /></a>
+    
+    
     </ul>
 </nav>

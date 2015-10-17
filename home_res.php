@@ -38,10 +38,11 @@ if ($_SESSION['cus_user1']=="") {
  
   <h5>ข้อมูลร้านอาหารมุสลิม</h5>
 				<ul>
-                  <li><a href="?page=restaurantAdd">ข้อมูลร้านอาหาร</a></li>
+                  <li><a href="?page=restaurantAdd">เพิ่มข้อมูลร้านอาหาร</a></li>
                   <li><a href="?page=branch">เพิ่มสาขา</a></li>
-                  <li><a href="#">ข่าวสารร้านอาหาร</a></li>
-                 </ul>
+                  <li><a href="#">ข่าวสารร้านอาหาร</a>				</li>
+                  
+				</ul>
 			<h5>ข้อมูลการลงทะเบียน</h5>
 				<ul>
                   <li><a href="#">เจ้าของร้านอาหาร</a></li>

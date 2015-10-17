@@ -10,7 +10,7 @@
  
     <p>เพิ่มเมนูอาหาร</p>
     <p>* สัญลักษณ์เครื่องหมายดอกจัน คือ ข้อมูลที่จำเป็นต้องระบุ</p>
-<form class="form-horizontal" method="post" enctype="multipart/form-data" action="?page=add_menu_action">	
+<form class="form-horizontal" method="post" enctype="multipart/form-data" action="add_menu_action">	
   <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">ชื่อร้านอาหาร:</label>
     	<div class="col-sm-3">

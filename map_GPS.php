@@ -8,8 +8,8 @@
 
 <style>
       #map {
-        height: 400px;
-		width: 500px;
+        height: 650px;
+		width: 850px;
       }
     </style>
     <script>
@@ -31,7 +31,7 @@ function initMap() {
 <?php include("header.php"); ?>
 <?php include("manu1.php"); ?>
 <?php include("manu3.php"); ?>
-<div class=" col-md-8">
+<div class=" col-md-9">
 <div class="panel panel-success">
   <div class="panel-body">
  
