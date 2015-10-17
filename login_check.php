@@ -16,7 +16,7 @@
 		}else{
 			$_SESSION["cus_user1"] = $row2["res_id"];
 			session_write_close();
-			echo "<meta http-equiv='refresh' content='1 ;url=index_res.php'>";
+			echo "<meta http-equiv='refresh' content='1 ;url=index_res.php?page=main'>";
 		}
 			
 	}else{

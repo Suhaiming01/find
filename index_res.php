@@ -8,12 +8,11 @@ if ($_SESSION['cus_user1']=="") {
 	exit();
 }
 @session_start();
- include("header.php"); 
+ include("header_res.php"); 
  include("manu1.php"); 
  include("home_res.php"); 
  include  'connectdb.php';
- ?> 
- <head>
+ ?><head>
 
  <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
@@ -28,20 +27,23 @@ if ($_SESSION['cus_user1']=="") {
 	}
 	</script>
 </head>      
-        <div class=" col-md-9">
+         
+ <div class=" col-md-9">
 			<div class="panel panel-success">
   				<div class="panel-body">
   					<?php
-						$page=$_GET['page']
-;
-						switch($page){
-							case 'restaurantAdd';
-								include'module/restaurant/restaurantAdd.php';
+						$page = $_GET['page'];
+						switch ($page) {
+							
+							case 'restaurantAdd':
+								include 'module/restaurant/restaurantAdd.php';
 								ิbreak;
-							case 'restaurantAddSave';
-								include'module/restaurant/restaurantAddSave.php';
+							case 'main':
+								include 'module/restaurant/main.php';
 								ิbreak;
-
+							case 'restaurantAddSave':
+								include 'module/restaurant/restaurantAddSave.php';
+								ิbreak;
 							}
 					?>
   				</div>
