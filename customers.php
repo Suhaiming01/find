@@ -1,4 +1,4 @@
-<?php include("header.php"); ?>
+	<?php include("header.php"); ?>
 <?php include("manu1.php"); ?>
 <?php include("manu3.php"); ?>
 <div class=" col-md-9">
@@ -35,7 +35,7 @@
     </p>
     </div>
       <div class="col-md-6">
-  <select class="input-sm" type="text" name="Initials">
+  <select class="form-control input-sm" type="text" name="Initials">
      <option value="คำนำหน้า">--คำนำหน้า--</option>
      <option value="นาย">นาย</option>
      <option value="นาง">นาง</option>
@@ -73,8 +73,8 @@
    <p>      <span class="form-group">
   วัน/เดือน/ปีเกิด :</br> <input type="date" class="form-control input-sm" placeholder="วัน/เดือน/ปี" name="tra_Birthday" required="required" />
  </p>
-  <button class="btn btn-default" type="submit">ตกลง</button>
-<button class="btn btn-default" type="reset">ยกเลิก</button>
+  <button class="btn btn-primary" type="submit">ตกลง</button>
+<button class="btn btn-primary" type="reset">ยกเลิก</button>
 </form>
 
  </p>
@@ -82,7 +82,7 @@
     </div>
   </div>
 </div>
-<script type="text/javascript">
+		<script type="text/javascript">
 			var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "none", {
 				validateOn : ["blur"]
 			});

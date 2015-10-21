@@ -43,9 +43,8 @@ a:active {
   <tr>
     <td><img src="images/iuu.png" alt="" width="1274" height="200" /></td>
   </tr>
-  <tr>     <td bgcolor="#FFFFFF">
-    <nav class="navbar navbar-default">
-  <div class="container-fluid">
+  <tr>     <td bgcolor="#FFFFFF"><nav class="navbar navbar-default">
+    <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <ul class="nav nav-pills">
@@ -78,16 +77,11 @@ a:active {
         <li class="dropdown">
 
    <li role="presentation" class="active"><a href="logout.php">ออกจากระบบ</a></li>
-   <li class="dropdown">
-    </ul>
+   <li class="dropdown">   
+   <img src="images/rypng.png" alt="" width="482" height="49" />
+      </ul>
           </ul>
         </li>
       </ul>
     </div>
-    <ul class="nav nav-pills">
-      <img src="images/add1.jpg" alt="" width="181" height="48" />
-      <a href="add_menu.php"><img src="images/add.jpg" alt="" width="176" height="49" /></a>
-    
-    
-    </ul>
 </nav>

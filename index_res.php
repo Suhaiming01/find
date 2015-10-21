@@ -33,18 +33,21 @@ if ($_SESSION['cus_user1']=="") {
   				<div class="panel-body">
   					<?php
 						$page = $_GET['page'];
-						switch ($page) {
-							
-							case 'restaurantAdd':
-								include 'module/restaurant/restaurantAdd.php';
-								ิbreak;
-							case 'main':
-								include 'module/restaurant/main.php';
-								ิbreak;
-							case 'restaurantAddSave':
-								include 'module/restaurant/restaurantAddSave.php';
-								ิbreak;
+							switch( $page ) {
+							   case 'restaurantAdd' : include 'module/restaurant/restaurantAdd.php'; break;
+							   case 'restaurantAddSave' : include 'module/restaurant/restaurantAddSave.php'; break;
+							   case 'main' : include 'module/restaurant/main.php'; break;
+							   case 'delete' : include 'module/restaurant/delete.php'; break;
+						       case 'profileEdit_res' : include 'module/restaurant/profileEdit_res.php'; break;
+						       case 'profileEditSave_res' : include 'module/restaurant/profileEditSave_res.php'; break;
+							   case 'addmenu_res' : include 'module/restaurant/addmenu_res.php'; break;
+							   case 'addmenu_Save' : include 'module/restaurant/addmenu_Save.php'; break;
+							   case 'editrestaurant' : include 'module/restaurant/editrestaurant.php'; break;
+							   case 'editrestaurantSave' : include 'module/restaurant/editrestaurantSave.php'; break;
+							   case 'res_password' : include 'module/restaurant/res_password.php'; break;
+							   case 'respassSave' : include 'module/restaurant/respassSave.php'; break;
 							}
+
 					?>
   				</div>
 			</div>

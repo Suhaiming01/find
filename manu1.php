@@ -19,9 +19,7 @@
       </form>
 	  <div class="navbar-header">
       <ul class="nav nav-pills">
-      <img src="images/Female_user_search_64px_1176952_easyicon.net.png" width="55" height="53" />
-      <img src="images/iuiuu.jpg" width="316" height="65" />
-      <img src="images/Map_65px_1083830_easyicon.net.png" width="65" height="65" />
+      <img src="images/ftt.png" width="487" height="61" />
       </div>
   
         </div>

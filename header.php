@@ -82,17 +82,12 @@ a:active {
             <li><a href="Restaurant_ow.php">เจ้าของร้านอาหาร</a></li>
             
             </ul>
-   <li role="presentation" class="active"><a href="logout.php">ออกจากระบบ</a></li>
+    <li role="presentation" class="active"><a href="logout.php">ออกจากระบบ</a></li>
    <li class="dropdown">
     </ul>
           </ul>
         </li>
       </ul>
     </div>
-    <ul class="nav nav-pills">
-      <img src="images/add1.jpg" alt="" width="181" height="48" />
-      <a href="add_menu.php"><img src="images/add.jpg" alt="" width="176" height="49" /></a>
-    
-    
-    </ul>
-</nav>
+    <img src="images/rypng.png" alt="" width="366" height="50" /> </nav>
+  

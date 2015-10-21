@@ -36,19 +36,20 @@ if ($_SESSION['cus_user1']=="") {
     </form>
   </div>
  
-  <h5>ข้อมูลร้านอาหารมุสลิม</h5>
+  <h4>ข้อมูลร้านอาหารมุสลิม</h4>
 				<ul>
                   <li><a href="?page=restaurantAdd">เพิ่มข้อมูลร้านอาหาร</a></li>
                   <li><a href="?page=branch">เพิ่มสาขา</a></li>
-                  <li><a href="#">ข่าวสารร้านอาหาร</a>				</li>
+                  <li><a href="?page=addmenu_res">เพิ่มเมนูอาหาร</a></li>
+                  <li><a href="#">ข่าวสารร้านอาหาร</a></li>
                   
 				</ul>
-			<h5>ข้อมูลการลงทะเบียน</h5>
+			<h4>จัดการข้อมูลเจ้าของร้าน</h4>
 				<ul>
-                  <li><a href="#">เจ้าของร้านอาหาร</a></li>
-                  <li><a href="#">ผู้ใช้ทั่วไป</a></li>
+                  <li><a href="?page=profileEdit_res">แก้ไขข้อมูลส่วนตัว</a></li>
+                  <li><a href="?page=res_password">เปลี่ยนรหัสผ่าน</a></li>
                </ul>
-            <h5>ข้อมูลทั่วไป</h5>
+            <h4>ข้อมูลทั่วไป</h4>
 				<ul>
                   <li><a href="#">เเผนที่ GPS</a></li>
                   <li><a href="#">เเสดงความคิดเห็น</a></li>

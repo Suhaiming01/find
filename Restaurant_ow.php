@@ -35,7 +35,7 @@
     
      <div class="col-md-10">
    
-     <select class="input-sm" type="text" name="Initials">
+     <select class="form-control input-sm" type="text" name="Initials">
      <option value="คำนำหน้า">--คำนำหน้า--</option>
      <option value="นาย">นาย</option>
      <option value="นาง">นาง</option>
@@ -68,8 +68,8 @@
    <p>      <span class="form-group">
   วัน/เดือน/ปีเกิด :</br> <input type="date" class="form-control input-sm" placeholder="วัน/เดือน/ปี" name="tra_Birthday" required="required" />
  </p>
- <button class="btn btn-default" type="submit">ตกลง</button>
-<button class="btn btn-default" type="reset">ยกเลิก</button>
+ <button class="btn btn-primary" type="submit">ตกลง</button>
+<button class="btn btn-primary" type="reset">ยกเลิก</button>
 </form>
 
  </p>
