@@ -46,6 +46,8 @@ if ($_SESSION['cus_user1']=="") {
 							   case 'editrestaurantSave' : include 'module/restaurant/editrestaurantSave.php'; break;
 							   case 'res_password' : include 'module/restaurant/res_password.php'; break;
 							   case 'respassSave' : include 'module/restaurant/respassSave.php'; break;
+							  
+							   
 							}
 
 					?>

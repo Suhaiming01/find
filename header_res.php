@@ -48,7 +48,7 @@ a:active {
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="?page=main">หน้าเเรก</a></li>
+  <li role="presentation" class="active"><a href="//?page=main">หน้าเเรก</a></li>
    <li class="dropdown">
     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ร้านอาหารมุสลิม<span class="caret"></span></a>
           <ul class="dropdown-menu">

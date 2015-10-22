@@ -1,9 +1,9 @@
 <?php
 	$id = $_SESSION["cus_user1"];
 	$sql = mysql_query("SELECT * FROM add_restaurant WHERE res_id='$id'");
-	$check = mysql_fetch_array($sql);
+	$check = mysql_num_rows($sql);
 	
-	if($check[0] < 1){
+	if($check < 1){
 ?>
 	<!---imag!--->	
         <img src="module/restaurant/images/uyrouo.png" alt="Responsive image" width="880" height="60" class="img-responsive">

@@ -5,6 +5,7 @@
 	
 	echo $id;
 ?>
+
 <form action="?page=profileEditSave_res" method="post" class="navbar-form navbar-left" role="search">
   <div class="col-md-10">
   <p>
