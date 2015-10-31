@@ -23,6 +23,8 @@ if ($_SESSION['cus_user1']=="") {
 								case 'profileEditSave' : include 'module/customer/profileEditSave.php'; break;
 								case 'cus_password' : include 'module/customer/cus_password.php'; break;
 								case 'cuspassSave' : include 'module/customer/cuspassSave.php'; break;
+								case 'cusdataSave' : include 'module/customer/cusdataSave.php'; break;
+								
 							}
 					?>
   		</div>

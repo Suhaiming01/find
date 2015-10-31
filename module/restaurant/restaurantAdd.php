@@ -4,6 +4,16 @@
 		width:520px;
       }
     </style>
+  <header>
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="author" content="Earthchie www.earthchie.com" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="thaidb/thaidb.js"></script>
+    <script type="text/javascript" src="thaidb/thaidb.min.js"></script>
+  </header>
 <!-----เงื่อนไข-!--->
 <h4>อัพเดทข้อมูลร้านอาหาร</h4>
 <p><img src="images/uiue.png" alt="" width="192" height="44" />
@@ -71,24 +81,24 @@
     	</div>
         <label for="inputEmail3" class="col-sm-2 control-label">ตำบล:</label>
         <div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_district" placeholder="ตำบล *"  />
+      		<input class="form-control input-sm" type="text"  name="district" id="district" placeholder="ตำบล *"  />
     	</div>
  
  </div>
    <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">อำเภอ :</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_canton" placeholder="อำเภอ *"  />
+      		<input class="form-control input-sm" type="text" name="amphoe" id="amphoe" placeholder="อำเภอ *"  />
     	</div>
         <label for="inputEmail3" class="col-sm-2 control-label">จังหวัด :</label>
         <div class="col-sm-3">
-      		<input class="form-control input-sm" type="text"  name="Add_province" placeholder="จังหวัด *"  />
+      		<input class="form-control input-sm" type="text"  name="province" id="province" placeholder="จังหวัด *"  />
     	</div>
 	</div>
   	<div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">รหัสไปษณีย์:</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text"name="Add_post" placeholder="รหัสไปษณีย์ *"  />
+      		<input class="form-control input-sm" type="text" name="zipcode" id="zipcode" placeholder="รหัสไปษณีย์ *"  />
     	</div>
     </div> 
     
@@ -148,10 +158,30 @@
         
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
+            
              	 <button type="submit" class="btn btn-primary">บันทึก</button>
                  <button type="reset" class="btn btn-primary">ยกเลิก</button>
                 
             </div>
   		</div>
 </form>
- 
+    <script>
+	
+		ThaiDB(); // เรียกใช้งาน
+		
+		/* วิธีเรียกใช้งานแบบกำหนดค่าเอง, ทำแคชฐานข้อมูลล่วงหน้า
+		
+		// แบบกำหนด selector เองได้ว่า field ไหนอยู่ที่ไหน
+		// preload() คือสั่งให้ดาวน์โหลด Database มาแคชไว้ล่วงหน้าเลย (ปกติจะโหลดฐานข้อมูลเฉพาะตอนที่จะใช้เท่านั้น)
+		
+		ThaiDB({
+			district: '[name="district"]',
+			amphoe: '[name="amphoe"]',
+			province: '[name="province"]',
+			zipcode: '[name="zipcode"]'
+		}).preload();
+		
+		*/
+	</script>
+
+  

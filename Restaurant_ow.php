@@ -1,82 +1,107 @@
 <?php include("header.php"); ?>
 <?php include("manu1.php"); ?>
 <?php include("manu3.php"); ?>
-<div class=" col-md-8">
+<div class=" col-md-9">
 <div class="panel panel-success">
   <div class="panel-body">
     <!-----เงื่อนไข-!--->
     <h4>เจ้าของร้านอาหาร</h4>
-  <div class=" col-md-12">
-<div class="panel panel-success">
-  <div class="panel-body">
+  
  *********กรุณากรอบทุกช่องถ้าไม่มีให้ใช้เครื่องหมาย (-) *******
  </div>
   <!-----เงื่อนไข-!--->
-  <form a action="Restaurant_ow_action.php" method="post" class="navbar-form navbar-left" role="search">
-  <div class="col-md-10">
-    <p>
-      ชื่อผู้ใช้ :</br><input class="form-control input-sm" type="text" name="Res_user" placeholder="ชื่อผู้ใช้ *" required />
-    </p>
-    </div>
-     <div class="col-md-10">
-     <p>
-     <span id="sprypassword3">
-      รหัสผ่าน :</br>
-<input name="Res_pass" type="password" class="form-control" id="mem_pass2" placeholder="รหัสผ่าน *" required>
-<span class="passwordRequiredMsg">กรุณากรอกข้อมูล.</span></span>
-    </p>
-    <p>
-      <span id="spryconfirm1">
-				ยืนยันรหัสผ่าน : </br><input name="mem_repass" type="password" class="form-control" id="mem_repass" placeholder="ยืนยันรหัสผ่าน *">
-									<span class="confirmRequiredMsg">กรุณากรอกข้อมูล.</span><span class="confirmInvalidMsg">รหัสผ่านไม่ตรง.</span></span>
-    </p>
-    </div>
-    
-    
-     <div class="col-md-10">
-   
-     <select class="form-control input-sm" type="text" name="Initials">
-     <option value="คำนำหน้า">--คำนำหน้า--</option>
-     <option value="นาย">นาย</option>
-     <option value="นาง">นาง</option>
-     <option value="นางสาว">นางสาว</option>
-    </select>
-</div>
-    
-     <div class="col-md-10">
-    <p>
-      ชื่อ-นามสกุล :</br><input class="form-control input-sm" type="text" name="Res_name" placeholder="ชื่อ-นามสกุล *" required />
-    </p>
-    </div>
-     <div class="col-md-10">
-    <p>
-      เลขบัตรประชาชน :</br><input name="Res_card" type="text" required="required" class="form-control input-sm" placeholder="เลขบัตรประจำตัวประชาชน *" maxlength="13" id="mynumber" onKeyUp="IsNumeric(this.value,this)" />
-    </p>
-    </div>
-   <div class="col-md-10">
-    <p>
-      อีเมล์ :</br><input class="form-control input-sm" type="text" name="Res_email" placeholder=" อีเมล์ *" required />
-    </p>
-    </div>
-     <div class="col-md-10">
-    <p>
-      เบอร์โทรศัพท์ :</br><input name="Res_phone" type="text" required="required" class="form-control input-sm" placeholder="เบอร์โทรศัพท์  *" maxlength="10" id="mynumber" onKeyUp="IsNumeric(this.value,this)" />
-    </p>
-    </div>
-     
-    <div class="col-md-12">
-   <p>      <span class="form-group">
-  วัน/เดือน/ปีเกิด :</br> <input type="date" class="form-control input-sm" placeholder="วัน/เดือน/ปี" name="tra_Birthday" required="required" />
- </p>
- <button class="btn btn-primary" type="submit">ตกลง</button>
-<button class="btn btn-primary" type="reset">ยกเลิก</button>
-</form>
-
- </p>
-    </div>
+  <form class="form-horizontal" method="post" enctype="multipart/form-data" action="Restaurant_ow_action.php">	
+  
+  
+   <div class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">ชื่อผู้ใช้:</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm"  type="text" name="Res_user" placeholder="ชื่อผู้ใช้ *"  />
+    	</div>
   </div>
-</div>
-<script type="text/javascript">
+   
+   <div class="form-group">
+    <span id="sprypassword3">
+    	<label for="inputEmail3" class="col-sm-2 control-label">รหัสผ่าน:</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm"  type="password" name="Res_pass" id="mem_pass2" placeholder="รหัสผ่าน *"  />
+    	<span class="passwordRequiredMsg">กรุณากรอกข้อมูล.</span></span>
+        </div>
+  </div>
+   
+   <div class="form-group">
+       <span id="spryconfirm1">
+    	<label for="inputEmail3" class="col-sm-2 control-label">ยืนยันรหัสผ่าน:</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm"  type="password" name="mem_repass" id="mem_repass" placeholder="ยืนยันรหัสผ่าน *"  />
+            <span class="confirmRequiredMsg">กรุณากรอกข้อมูล.</span><span class="confirmInvalidMsg">รหัสผ่านไม่ตรง.</span></span>
+    	</div>
+  </div>
+   
+  
+  <div class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">คำนำหน้า:</label>
+    	<div class="col-sm-3">
+      		<select class="form-control input-sm" type="text" name="Initials">
+               <option value="คำนำหน้า">คำนำหน้า</option>
+               <option value="นาย">นาย</option>
+               <option value="นาง">นาง</option>
+               <option value="นางสาว">นางสาว</option>
+            </select>
+    	</div>
+  </div>
+   <div class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">รูปภาพประจำตัว:</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm"  type="file" name="Cus_Name" placeholder="รูปภาพประจำตัว *"  />
+    	</div>
+  </div>
+  
+    <div class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">ชื่อ-นามสกุล:</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm"  type="text" name="Res_name" placeholder="ชื่อ-นามสกุล *"  />
+    	</div>
+  </div>
+  <div class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">เลขบัตรประชาชน:</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm"  type="text"  name="Res_card" placeholder="เลขบัตรประจำตัวประชาชน *" maxlength="13" id="mynumber" onKeyUp="IsNumeric(this.value,this)" />
+            
+    	</div>
+  </div>
+  <div class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">อีเมล์:</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm"  type="text" name="Res_email" placeholder="อีเมล์ *"  />
+    	</div>
+  </div>
+  <div class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">เบอร์โทรศัพท์:</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm"  type="text" name="Res_phone" placeholder="เบอร์โทรศัพท์ *"  maxlength="10" id="mynumber" onKeyUp="IsNumeric(this.value,this)" />
+    	</div>
+  </div>
+      <div class="form-group">
+         <span class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">วัน/เดือน/ปีเกิด :</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm" type="date"  name="tra_Birthday" placeholder="วัน/เดือน/ปีเกิด   *"  />
+    	</div>
+        </div>
+   
+   		
+        
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+             	<button type="submit" class="btn btn-primary">บันทึก</button>
+                 <button type="reset" class="btn btn-primary">ยกเลิก</button>
+                 
+            </div>
+  		</div>
+</form>
+  
+       <script type="text/javascript">
 			var sprytextfield1 = new Spry.Widget.ValidationTextField("sprytextfield1", "none", {
 				validateOn : ["blur"]
 			});

@@ -13,6 +13,16 @@
 		width:520px;
       }
     </style>
+     <header>
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<meta name="author" content="Earthchie www.earthchie.com" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="thaidb/thaidb.js"></script>
+    <script type="text/javascript" src="thaidb/thaidb.min.js"></script>
+  </header>
 <!-----เเก้ร้านอาหาร-!--->
 <h4>อัพเดทข้อมูลร้านอาหาร</h4>
 <p><img src="images/uiue.png" alt="" width="192" height="44" />
@@ -81,24 +91,24 @@
     	</div>
         <label for="inputEmail3" class="col-sm-2 control-label">ตำบล:</label>
         <div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_district"  value="<?=$row['add_district']?>" />
+      		<input class="form-control input-sm" type="text" name="district"  value="<?=$row['district']?>" />
     	</div>
  
  </div>
    <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">อำเภอ :</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_canton"  value="<?=$row['add_canton']?>" />
+      		<input class="form-control input-sm" type="text" name="amphoe"  value="<?=$row['amphoe']?>" />
     	</div>
         <label for="inputEmail3" class="col-sm-2 control-label">จังหวัด :</label>
         <div class="col-sm-3">
-      		<input class="form-control input-sm" type="text"  name="Add_province"  value="<?=$row['add_province']?>" />
+      		<input class="form-control input-sm" type="text"  name="province"  value="<?=$row['province']?>" />
     	</div>
 	</div>
   	<div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">รหัสไปษณีย์:</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text"name="Add_post"  value="<?=$row['add_post']?>" />
+      		<input class="form-control input-sm" type="text"name="zipcode"  value="<?=$row['zipcode']?>" />
     	</div>
     </div> 
     
@@ -167,3 +177,22 @@
   		</div>
 </form>
  
+ 
+    <script>
+	
+		ThaiDB(); // เรียกใช้งาน
+		
+		/* วิธีเรียกใช้งานแบบกำหนดค่าเอง, ทำแคชฐานข้อมูลล่วงหน้า
+		
+		// แบบกำหนด selector เองได้ว่า field ไหนอยู่ที่ไหน
+		// preload() คือสั่งให้ดาวน์โหลด Database มาแคชไว้ล่วงหน้าเลย (ปกติจะโหลดฐานข้อมูลเฉพาะตอนที่จะใช้เท่านั้น)
+		
+		ThaiDB({
+			district: '[name="district"]',
+			amphoe: '[name="amphoe"]',
+			province: '[name="province"]',
+			zipcode: '[name="zipcode"]'
+		}).preload();
+		
+		*/
+	 </script>

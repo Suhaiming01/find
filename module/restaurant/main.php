@@ -32,8 +32,9 @@
 		<tr>
 			<td align="center"><?= $row['add_name'] ?></td>
     		<td align="center"><?= $row['add_type_res'] ?></td>
-            <td align="center"><?= $row['add_province'] ?></td>
+            <td align="center"><?= $row['province'] ?></td>
             <td align="center">
+           
                 <a href='?page=editrestaurant&id=<?= $row[add_id] ?>'><img src="images/edit.png" width="38" height="37"></a>
                 |
                 <a href='?page=delete&id=<?= $row[add_id] ?>'><img src="images/delete.png" width="36" height="37"></a>

@@ -8,7 +8,7 @@ include  'connectdb.php';
  $cus_id   = $_POST ['cus_id'];
  $username = $_POST ['Cus_user'];
  $password = $_POST ['Cus_pass'];
- $Initials=$_POST ['Initials'] ;
+ $Initials =$_POST ['Initials'] ;
  $Cus_Name = $_POST ['Cus_Name'];
  $fileUpload= $_FILE['fileUpload'];
  $Cus_card = $_POST ['Cus_card'];
@@ -16,22 +16,22 @@ include  'connectdb.php';
  $Cus_phone = $_POST ['Cus_phone'];
  $Cus_Add = $_POST ['Cus_Address'];
  $day1 = $_POST ['tra_Birthday'];
-
+ 
+ 
 if(move_uploaded_file($_FILES["filUpload"]["tmp_name"],"myfile/".$_FILES["filUpload"]["name"]))
 
-$sql  = "insert into customers (cus_id,cus_user,cus_pass,Cus_Initials,cus_name,cus_card,cus_email,cus_phone,cus_add,cus_day,images_cus) VALUES('cus_id','$username','$password','$Initials','$Cus_Name','$Cus_card',
+ $sql  = "insert into customers (cus_id,cus_user,cus_pass,Cus_Initials,cus_name,cus_card,cus_email,cus_phone,cus_add,cus_day,images_cus) VALUES('cus_id','$username','$password','$Initials','$Cus_Name','$Cus_card',
 '$Cus_email','$Cus_phone','$Cus_Add','".$day1."','".$_FILES["filUpload"]["name"]."')";
-
 
 $qr = mysql_query($sql) or die("ไม่สามารถเพิ่มข้อมูลได้");
 if($qr)
 
 {
-	echo "<h2 style='color:#CC0066;'>คุณได้เพิ่มสมาชิกใหม่เรียบร้อย</h2>";
+	echo "<h2 style='color:#CC0066;'>คุณได้เพิ่มเจ้าของร้านอาหารเรียบร้อย</h2>";
 	header("refresh:2;url:listuser.php");
 	}else{
-		echo"<h2>พบปัญหา คุณไม่สามารถเพิ่มสมาชิกได้</h2>";
-		}
+	echo"<h2>พบปัญหา คุณไม่สามารถเพิ่มเจ้าของร้านอาหารได้</h2>";
+}
 
 ?>
 
@@ -46,7 +46,7 @@ if($qr)
  <?php echo "username คือ $username" ?> <br />
  <?php echo 'password คือ'.$password; ?>
   </p>
-
+  
   
   <form name="form1" method="post" action="">
 
@@ -118,8 +118,7 @@ mysql_close($conn);
   
  
 </form>
-  
-  </div>
+</div>
    <?PHP include("footer.php");?>
 </div>
 

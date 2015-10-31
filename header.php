@@ -36,7 +36,7 @@ a:active {
         
 		<script src="./js/jquery.uploadify-3.1.min.js" type="text/javascript"></script>
 
-<title>Collaboration by TEMPLATED</title>
+<title>ระบบค้นหาร้านอาหารมุสลิม</title>
 
 <!----header-!-->
 <table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
@@ -90,4 +90,3 @@ a:active {
       </ul>
     </div>
     <img src="images/rypng.png" alt="" width="366" height="50" /> </nav>
-  

@@ -38,6 +38,7 @@ if ($_SESSION['cus_user1']=="") {
  
   <h4>จัดการข้อมูลสมาชิก</h4>
 				<ul>
+                  <li><a href="?page=cusdataSave">ข้อมูลการสมัคร</a></li>
                   <li><a href="?page=profileEdit">แก้ไขข้อมูลส่วนตัว</a></li>
                   <li><a href="?page=cus_password">เปลี่ยนรหัสผ่าน</a></li>
                   
