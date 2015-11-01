@@ -37,7 +37,8 @@
            
        <a href='?page=editmenu&id=<?= $row['add_menu_id'] ?>'><img src="images/edit.png" width="38" height="37"></a>
                 |
-      <a href='?page=delete_menu&id=<?= $row['add_menu_id'] ?>'><img src="images/delete.png" width="36" height="37"></a>
+      <a href='?page=delete_menu&id=<?= $row['add_menu_id'] ?>'onclick="return confirm('คุณเเน่ใจว่าต้องการจะลบข้อความนี้');">
+      <img src="images/delete.png" width="36" height="37"></a>
             </td>
 		</tr>
 <?php 

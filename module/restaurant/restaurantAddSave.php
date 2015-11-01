@@ -26,5 +26,6 @@
 	VALUES('$id','$Add_type','$Add_Registration','$Add_halal','$Add_house','$Add_road','$Add_mu','$district','$amphoe','$province','$zipcode','$Add_lotitude','$Add_longititude','$Add_time','$Add_seat','$Add_table','$Add_Description','$Add_web','$Add_Notes','$Add_name')");
 
 
+
 //echo "ok";
 ?>

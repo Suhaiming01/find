@@ -53,7 +53,7 @@
    <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">รูปภาพประจำตัว:</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm"  type="file" name="Cus_Name" placeholder="รูปภาพประจำตัว *"  />
+      		<input class="form-control input-sm"  type="file" name="filUpload" placeholder="รูปภาพประจำตัว *"  />
     	</div>
   </div>
   

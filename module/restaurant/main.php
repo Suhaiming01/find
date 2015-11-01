@@ -5,6 +5,7 @@
 	
 	if($check < 1){
 ?>
+
 	<!---imag!--->	
         <img src="module/restaurant/images/uyrouo.png" alt="Responsive image" width="880" height="60" class="img-responsive">
        
@@ -17,10 +18,12 @@
 <?php
 		}else{
 ?>
-<p>ข้อมูลร้านอาหารของคุณ    </p>
-    <table width="359" class="table table-bordered table-striped">
+<p>ข้อมูลร้านอาหารของคุณ </p>
+
+<table width="359" class="table table-bordered table-striped">
 <tr class="table-bordered">
    	  <tr>
+             
         	<td width="90" align="center">ชื่อร้านอาหาร</td>
             <td width="65" align="center">ประเภทร้านอาหาร</td>
              <td width="65" align="center">จังหวัด</td>
@@ -29,7 +32,9 @@
 <?php
 	while($row = mysql_fetch_array($sql)){
 ?>
+
 		<tr>
+            
 			<td align="center"><?= $row['add_name'] ?></td>
     		<td align="center"><?= $row['add_type_res'] ?></td>
             <td align="center"><?= $row['province'] ?></td>

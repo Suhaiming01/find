@@ -10,6 +10,7 @@
 	$Cus_initial= $_POST['Initials'];
 	
 
+
 	$update = mysql_query("update customers set cus_user='$Cus_user',cus_Name='$Cus_Name',cus_card='$Cus_card',cus_email='$Cus_email',cus_phone='$Cus_phone', cus_add='$Cus_Address',cus_day='$tra_Birthday',Cus_Initials='$Cus_initial' where cus_id='$id'");
 
 	echo "Berjaya";

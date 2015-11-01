@@ -28,6 +28,7 @@
 <p><img src="images/uiue.png" alt="" width="192" height="44" />
 <p><img src="images/uiuei.png" alt="" width="558" height="30" />  
 <p>*จำเป็นต้องกรอบ</p>
+
 <form class="form-horizontal" method="post" enctype="multipart/form-data" action="?page=editrestaurantSave">	
   <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">ชื่อร้านอาหาร:</label>

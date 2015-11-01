@@ -7,10 +7,10 @@
  
   <!-----เงื่อนไข-!--->
   
-   <h4>ข้อมูลสมาชิก</h4>
+   <h4>ข้อมูลของร้านอาหาร</h4>
   
   <?php
- $sql= "select * from customers  where cus_id ";
+ $sql= "select * from restaurant  where res_id ";
  $q = mysql_query($sql);
   $num =  mysql_num_rows($q);
  ?>
@@ -21,7 +21,7 @@
 <tr class="table-bordered">
 <td width="277" align="center">ลำดับ</td>
 <td width="602"align="center">ชื่อ-นามสกุล</td>
-<td width="602"align="center">ที่อยู่</td>
+<td width="602"align="center">เลขบัตรประชาชน</td>
 <td width="602"align="center">วันเกิด</td>
 <td width="602"align="center">รายละเอียด</td>
 </tr>
@@ -34,10 +34,10 @@ $i=1;
  
  <tr class="table-bordered">
 <td width="277" align="center"><?=$i?></td>
-<td width="602" align="center"><?=$result['cus_name']?></td>
-<td width="602" align="center"><?=$result['cus_add']?></td>
-<td width="602"align="center"><?=$result['cus_day']?></td>
-<td width="602"align="center"><a href="cusdataSave.php?cus_id=<?=$result['cus_id']?>">ข้อมูล....>></a></td>
+<td width="602" align="center"><?=$result['res_name']?></td>
+<td width="602" align="center"><?=$result['res_card']?></td>
+<td width="602"align="center"><?=$result['res_day']?></td>
+<td width="602"align="center"><a href="resdataSave.php?res_id=<?=$result['res_id']?>">ข้อมูล....>></a></td>
 
 
 

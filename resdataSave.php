@@ -4,6 +4,12 @@
 <div class=" col-md-9">
 <div class="panel panel-success">
   <div class="panel-body">
+  
+  
+  
+  
+  <?php if($_GET[res_id]!=''){  $_SESSION[sres_id]=$_GET[res_id]  ;   } 
+	  	//echo "sres_id=".$_SESSION[sres_id];?>
 <?php
 
 	include  'connectdb.php';
@@ -16,7 +22,7 @@
 			   mysql_query($sql_del);
 			   
 			}*/
-			$strSQL = "SELECT * FROM customers";
+			$strSQL = "SELECT * FROM restaurant  WHERE res_id = '".$_GET['res_id']."'";
 				mysql_query("SET character_set_results=utf8");
 				mysql_query("SET character_set_client=utf8");
 				mysql_query("SET character_set_connection=utf8");
@@ -31,7 +37,7 @@
  <h4>ข้อมูลการสมัคร</h4> 
  <?php
 	$id = $_SESSION["cus_user1"];
-	$sql = mysql_query("SELECT * FROM customers WHERE cus_id='$id'");
+	$sql = mysql_query("SELECT * FROM restaurant WHERE res_id = '".$_GET['res_id']."'");
 	$row = mysql_fetch_array($sql);
 ?>
 
@@ -42,39 +48,35 @@
   
     <td width="30%" height="24" align="right">รูปภาพประจำตัว:</td>
     
-    <td width="70%"align="left"><img src="myfile/<?php echo $objResult["images_cus"];?>"></td>
+    <td width="70%"align="left"><img src="myfile/<?php echo $objResult["images_res"];?>"></td>
   </tr>
    <tr>
     <td height="23" align="right">ชื่อผู้ใช้:</td>
-    <td><?=$row['cus_name']?></td>
+    <td><?=$row['res_user']?></td>
   </tr>
    <tr>
     <td height="23" align="right">คำนำหน้า:</td>
-    <td><?= $row['Cus_Initials']?></td>
+    <td><?= $row['res_Initials']?></td>
   </tr>
   <tr>
     <td height="23" align="right">ชื่อ-นามสกุล :</td>
-    <td><?= $row['cus_name']?></td>
+    <td><?= $row['res_name']?></td>
   </tr>
   <tr>
     <td height="24" align="right">เลขบัตรประจำตัวประชาชน :</td>
-    <td><?=$row['cus_card']?></td>
+    <td><?=$row['res_card']?></td>
   </tr>
   <tr>
     <td height="24" align="right">อีเมล์ :</td>
-    <td><?= $row['cus_email'] ?></td>
+    <td><?= $row['res_email'] ?></td>
   </tr>
   <tr>
     <td height="22" align="right">เบอร์โทรศัพท์ :</td>
-    <td><?=$row['cus_phone']?></td>
+    <td><?=$row['res_phone']?></td>
   </tr>
    <tr>
-    <td height="22" align="right">ที่อยู่ :</td>
-    <td><?=$row['cus_add']?></td>
-  </tr> 
-  <tr>
     <td height="22" align="right">วัน/เดือน/ปีเกิด :</td>
-    <td><?=$row['cus_day']?></td>
+    <td><?=$row['res_day']?></td>
   </tr>
   
   
@@ -83,6 +85,8 @@
       }
       ?>
      </table>
-      <a href="listcus_Save.php">กลับ</a><input type="reset" name="Reset" id="button" value="Reset" />
+      <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+      <a href="listres_Save.php"><button type="reset" class="btn btn-primary">ถอยกลับ</button></a> 
       </div>
 </div>

@@ -12,6 +12,7 @@
 	$qr = mysql_query($sql) or die("ไม่สามารถเพิ่มข้อมูลได้");
 	if($qr)
 	{
+		
 		echo "<h2 style='color:#CC0066;'>คุณได้เพิ่มเมนูอาหารเรียบร้อย</h2>";
 		header("refresh:2;url:listuser.php");
 		}else{
