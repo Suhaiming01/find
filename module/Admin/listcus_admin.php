@@ -1,20 +1,10 @@
-<?php include("header.php"); ?>
-<?php include("manu1.php"); ?>
-<?php include("manu3.php"); ?>
-<div class=" col-md-9">
-<div class="panel panel-success">
-  <div class="panel-body">
- 
-  <!-----เงื่อนไข-!--->
-  
+
    <h4>ข้อมูลสมาชิก</h4>
   
   <?php
- include  'connectdb.php';
- $id = $_SESSION["cus_user1"];
- $sql= "select * from customers where cus_id='$id'";
+ $sql= "select * from customers  where cus_id ";
  $q = mysql_query($sql);
- $num =  mysql_num_rows($q);
+  $num =  mysql_num_rows($q);
  ?>
  
   <table width="860" border="0" cellspacing="0" cellpadding="0">
@@ -39,7 +29,7 @@ $i=1;
 <td width="602" align="center"><?=$result['cus_name']?></td>
 <td width="602" align="center"><?=$result['cus_add']?></td>
 <td width="602"align="center"><?=$result['cus_day']?></td>
-<td width="602"align="center"><a href="cusdataSave.php?cus_id=<?=$result['cus_id']?>">ข้อมูล....>></a></td>
+<td width="602"align="center"><a href='?page=cusdata_admin&cus_id=<?=$result['cus_id']?>'>ข้อมูล....>></a></td>
 
 
 
@@ -72,5 +62,3 @@ $i++;
 </nav>
 
    
- </div>
-    </div>

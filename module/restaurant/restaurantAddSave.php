@@ -25,7 +25,5 @@
 	 $sql= mysql_query("insert into add_restaurant (res_id,add_type_res,add_Registration,add_halal,add_House,add_road,add_mu,district,amphoe,province,zipcode,add_latitude,add_longititude,add_time,add_seat,add_table,add_Description,add_web,add_Notes,add_name)
 	VALUES('$id','$Add_type','$Add_Registration','$Add_halal','$Add_house','$Add_road','$Add_mu','$district','$amphoe','$province','$zipcode','$Add_lotitude','$Add_longititude','$Add_time','$Add_seat','$Add_table','$Add_Description','$Add_web','$Add_Notes','$Add_name')");
 
-
-
-//echo "ok";
+echo "<meta http-equiv='refresh' content='0;URL=./index_res.php?page=main'>";
 ?>

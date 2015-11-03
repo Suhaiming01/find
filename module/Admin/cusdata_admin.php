@@ -1,8 +1,9 @@
- <?php
+  
+  <?php if($_GET[cus_id]!=''){  $_SESSION[scus_id]=$_GET[cus_id]  ;   } 
+	  	//echo "scus_id=".$_SESSION[scus_id];?>
+<?php
 
 	include  'connectdb.php';
-	$id = $_SESSION["cus_user1"];
-	//echo $id;
 	//$objConnect = mysql_connect("localhost","root","405359010") or die("Error Connect to Database");
 	//$objDB = mysql_select_db("mydatabase");
 	/* if($_GET[del]==1){
@@ -12,7 +13,7 @@
 			   mysql_query($sql_del);
 			   
 			}*/
-			$strSQL = "SELECT * FROM customers WHERE cus_id='$id'";
+			$strSQL = "SELECT * FROM customers  WHERE cus_id = '".$_GET['cus_id']."'";
 				mysql_query("SET character_set_results=utf8");
 				mysql_query("SET character_set_client=utf8");
 				mysql_query("SET character_set_connection=utf8");
@@ -23,10 +24,11 @@
 	while($objResult = mysql_fetch_array($objQuery))
 	{?>
     
- <h4>ข้อมูลการสมัคร</h4> 
-<?php
+    
+ <h4>ข้อมูลการสมัครของสมาชิก</h4> </br>
+ <?php
 	$id = $_SESSION["cus_user1"];
-	$sql = mysql_query("SELECT * FROM customers WHERE cus_id='$id'");
+	$sql = mysql_query("SELECT * FROM customers WHERE cus_id = '".$_GET['cus_id']."'");
 	$row = mysql_fetch_array($sql);
 ?>
 
@@ -41,7 +43,7 @@
   </tr>
    <tr>
     <td height="23" align="right">ชื่อผู้ใช้:</td>
-    <td><?= $row['cus_user']?></td>
+    <td><?=$row['cus_user']?></td>
   </tr>
    <tr>
     <td height="23" align="right">คำนำหน้า:</td>
@@ -77,4 +79,7 @@
    
       }
       ?>
-      </table>
+     </table>
+      <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+      <a href="?page=listcus_admin"><button type="reset" class="btn btn-primary">ถอยกลับ</button></a> 

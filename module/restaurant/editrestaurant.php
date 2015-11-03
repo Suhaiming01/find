@@ -1,6 +1,6 @@
 <?php
-	$id = $_SESSION["cus_user1"];
-	$sql = mysql_query("SELECT * FROM add_restaurant WHERE res_id='$id'");
+	$id = $_GET['id'];
+	$sql = mysql_query("SELECT * FROM add_restaurant WHERE add_id='$id'");
 	$row = mysql_fetch_array($sql);
 	
 	echo $id;

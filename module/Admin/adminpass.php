@@ -1,6 +1,6 @@
  <p>เปลี่ยนรหัสผ่าน</p>
     <p>* สัญลักษณ์เครื่องหมายดอกจัน คือ ข้อมูลที่จำเป็นต้องระบุ</p>
-<form class="form-horizontal" method="post" enctype="multipart/form-data" action="?page=cuspassSave">	
+<form class="form-horizontal" method="post" enctype="multipart/form-data" action="?page=adminpassSave">	
   <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">รหัสผ่านเดิม:</label>
     	<div class="col-sm-3">

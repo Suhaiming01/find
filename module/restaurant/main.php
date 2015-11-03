@@ -20,21 +20,23 @@
 ?>
 <p>ข้อมูลร้านอาหารของคุณ </p>
 
-<table width="359" class="table table-bordered table-striped">
+<table width="860" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="775"><table width="95%" border="0"  class="table table-hover table-striped">
 <tr class="table-bordered">
-   	  <tr>
-             
-        	<td width="90" align="center">ชื่อร้านอาหาร</td>
+            <td width="40" align="center">ลำดับ</td>
+        	<td width="70" align="center">ชื่อร้านอาหาร</td>
             <td width="65" align="center">ประเภทร้านอาหาร</td>
              <td width="65" align="center">จังหวัด</td>
             <td width="65" align="center">จัดการ</td>
       </tr>
 <?php
+$i=1;
 	while($row = mysql_fetch_array($sql)){
 ?>
 
-		<tr>
-            
+		 <tr class="table-bordered">
+            <td align="center"><?=$i?></td>
 			<td align="center"><?= $row['add_name'] ?></td>
     		<td align="center"><?= $row['add_type_res'] ?></td>
             <td align="center"><?= $row['province'] ?></td>
@@ -46,6 +48,7 @@
             </td>
 		</tr>
 <?php 
+$i++;
 	}
 }
  ?>

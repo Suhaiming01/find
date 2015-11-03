@@ -1,8 +1,8 @@
- <?php
+ <?php if($_GET[res_id]!=''){  $_SESSION[sres_id]=$_GET[res_id]  ;   } 
+	  	//echo "sres_id=".$_SESSION[sres_id];?>
+<?php
 
 	include  'connectdb.php';
-	$id = $_SESSION["cus_user1"];
-	//echo $id;
 	//$objConnect = mysql_connect("localhost","root","405359010") or die("Error Connect to Database");
 	//$objDB = mysql_select_db("mydatabase");
 	/* if($_GET[del]==1){
@@ -12,7 +12,7 @@
 			   mysql_query($sql_del);
 			   
 			}*/
-			$strSQL = "SELECT * FROM customers WHERE cus_id='$id'";
+			$strSQL = "SELECT * FROM restaurant  WHERE res_id = '".$_GET['res_id']."'";
 				mysql_query("SET character_set_results=utf8");
 				mysql_query("SET character_set_client=utf8");
 				mysql_query("SET character_set_connection=utf8");
@@ -23,10 +23,11 @@
 	while($objResult = mysql_fetch_array($objQuery))
 	{?>
     
- <h4>ข้อมูลการสมัคร</h4> 
-<?php
+    
+ <h4>ข้อมูลการสมัครของเจ้าของร้าน</h4></br>
+ <?php
 	$id = $_SESSION["cus_user1"];
-	$sql = mysql_query("SELECT * FROM customers WHERE cus_id='$id'");
+	$sql = mysql_query("SELECT * FROM restaurant WHERE res_id = '".$_GET['res_id']."'");
 	$row = mysql_fetch_array($sql);
 ?>
 
@@ -37,39 +38,35 @@
   
     <td width="30%" height="24" align="right">รูปภาพประจำตัว:</td>
     
-    <td width="70%"align="left"><img src="myfile/<?php echo $objResult["images_cus"];?>"></td>
+    <td width="70%"align="left"><img src="myfile/<?php echo $objResult["images_res"];?>"></td>
   </tr>
    <tr>
     <td height="23" align="right">ชื่อผู้ใช้:</td>
-    <td><?= $row['cus_user']?></td>
+    <td><?=$row['res_user']?></td>
   </tr>
    <tr>
     <td height="23" align="right">คำนำหน้า:</td>
-    <td><?= $row['Cus_Initials']?></td>
+    <td><?= $row['res_Initials']?></td>
   </tr>
   <tr>
     <td height="23" align="right">ชื่อ-นามสกุล :</td>
-    <td><?= $row['cus_name']?></td>
+    <td><?= $row['res_name']?></td>
   </tr>
   <tr>
     <td height="24" align="right">เลขบัตรประจำตัวประชาชน :</td>
-    <td><?=$row['cus_card']?></td>
+    <td><?=$row['res_card']?></td>
   </tr>
   <tr>
     <td height="24" align="right">อีเมล์ :</td>
-    <td><?= $row['cus_email'] ?></td>
+    <td><?= $row['res_email'] ?></td>
   </tr>
   <tr>
     <td height="22" align="right">เบอร์โทรศัพท์ :</td>
-    <td><?=$row['cus_phone']?></td>
+    <td><?=$row['res_phone']?></td>
   </tr>
    <tr>
-    <td height="22" align="right">ที่อยู่ :</td>
-    <td><?=$row['cus_add']?></td>
-  </tr> 
-  <tr>
     <td height="22" align="right">วัน/เดือน/ปีเกิด :</td>
-    <td><?=$row['cus_day']?></td>
+    <td><?=$row['res_day']?></td>
   </tr>
   
   
@@ -77,4 +74,7 @@
    
       }
       ?>
-      </table>
+     </table>
+      <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+      <a href="?page=listres_admin"><button type="reset" class="btn btn-primary">ถอยกลับ</button></a> 

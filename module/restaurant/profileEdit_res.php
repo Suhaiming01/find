@@ -2,9 +2,9 @@
 	$id = $_SESSION["cus_user1"];
 	$sql = mysql_query("SELECT * FROM restaurant WHERE res_id='$id'");
 	$row = mysql_fetch_array($sql);
-	
-	echo $id;
-?>
+	?>
+    <h4>เเก้ไขข้อมูลเจ้าของร้าน</h4>
+    </br>
 
 <form class="form-horizontal" method="post" enctype="multipart/form-data" action="?page=profileEditSave_res">	
   

@@ -3,7 +3,7 @@
 	$sql = mysql_query("SELECT * FROM customers WHERE cus_id='$id'");
 	$row = mysql_fetch_array($sql);
 ?>
-
+<h4>เเก้ข้อมูลสมาชิก</h4>
 <form class="form-horizontal" method="post" enctype="multipart/form-data" action="?page=profileEditSave">
 
  <div class="form-group">

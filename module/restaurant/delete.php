@@ -4,6 +4,7 @@
 	$sql = mysql_query("DELETE FROM add_restaurant WHERE add_id='$id'");
 	
 	echo "Berjaya";
+	echo "<meta http-equiv='refresh' content='0;URL=./index_res.php?page=main'>";
 ?>
 	
 	

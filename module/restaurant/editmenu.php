@@ -1,4 +1,5 @@
 <?php
+    $add_menu_id=$_GET['add_menu_id'];
 	$id = $_SESSION["cus_user1"];
 	$sql = mysql_query("SELECT * FROM add_menu WHERE res_id='$id'");
 	$row = mysql_fetch_array($sql);
@@ -8,8 +9,7 @@
 
 <p>เพิ่มเมนูอาหาร</p>
     <p>* สัญลักษณ์เครื่องหมายดอกจัน คือ ข้อมูลที่จำเป็นต้องระบุ</p>
- 
-<form class="form-horizontal" method="post" enctype="multipart/form-data" action="?page=editmenuSave">	
+ <form class="form-horizontal" method="post" enctype="multipart/form-data" action="?page=editmenuSave">	
   
   
    <div class="form-group">
