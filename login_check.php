@@ -27,6 +27,7 @@
 		}else{
 			$_SESSION["cus_user1"] = $row3["admin_id"];
 			session_write_close();
+			echo "<script language='javascript'>alert('ยินดีต้อนรับเข้าสู่ระบบ');</script>";
 			echo "<meta http-equiv='refresh' content='1 ;url=index_admin.php'>";
 		}
 		}
@@ -34,17 +35,21 @@
 		}else{
 			$_SESSION["cus_user1"] = $row2["res_id"];
 			session_write_close();
+			echo "<script language='javascript'>alert('ยินดีต้อนรับเข้าสู่ระบบ');</script>";
 			echo "<meta http-equiv='refresh' content='1 ;url=index_res.php?page=main'>";
 		}
 		
 		}else{
 		$_SESSION["cus_user1"] = $row1["cus_id"];
 		session_write_close();
+		echo "<script language='javascript'>alert('ยินดีต้อนรับเข้าสู่ระบบ');</script>";
 		echo "<meta http-equiv='refresh' content='1 ;url=index.php'>";
 		
 	}
 	
-		mysql_close();	
+		mysql_close();
+		
+	
 ?>
 	
 	

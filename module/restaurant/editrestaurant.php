@@ -3,7 +3,6 @@
 	$sql = mysql_query("SELECT * FROM add_restaurant WHERE add_id='$id'");
 	$row = mysql_fetch_array($sql);
 	
-	echo $id;
 ?>
 
 <!-----เเก้ร้านอาหาร-!--->
@@ -24,7 +23,11 @@
     <script type="text/javascript" src="thaidb/thaidb.min.js"></script>
   </header>
 <!-----เเก้ร้านอาหาร-!--->
-<h4>อัพเดทข้อมูลร้านอาหาร</h4>
+ <div class="alert alert-success">
+  <strong><p align="center">เเก้ไขข้อมูลร้านอาหาร</strong>* สัญลักษณ์เครื่องหมายดอกจัน คือ ข้อมูลที่จำเป็นต้องระบุ
+</p></div>
+
+
 <p><img src="images/uiue.png" alt="" width="192" height="44" />
 <p><img src="images/uiuei.png" alt="" width="558" height="30" />  
 <p>*จำเป็นต้องกรอบ</p>
@@ -112,40 +115,21 @@
       		<input class="form-control input-sm" type="text"name="zipcode"  value="<?=$row['zipcode']?>" />
     	</div>
     </div> 
-    
-    <div class="form-group">
-    	<label for="inputEmail3" class="col-sm-2 control-label">แผนที่:</label>
-    	<div class="col-sm-10">
-      		<div id="map"></div>
-    	</div>
-    </div> 
-    
-    
-       <div class="form-group">
-    	<label for="inputEmail3" class="col-sm-2 control-label">ละติจูล  :</label>
-    	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_lotitude"  value="<?=$row['add_latitude']?>" />
-    	</div>
-        <label for="inputEmail3" class="col-sm-2 control-label">ลองติจูล:</label>
-        <div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_longititude"  value="<?=$row['add_longititude']?>" />
-    	</div>
-</div>
- <div class="form-group">
-    	<label for="inputEmail3" class="col-sm-2 control-label">วันเวลาเปิดบริการ:</label>
+     <div class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">วันเปิดบริการ:</label>
     	<div class="col-sm-3">
       		<input class="form-control input-sm" type="text" name="Add_time"  value="<?=$row['add_time']?>" />
     	</div>
-        <label for="inputEmail3" class="col-sm-2 control-label">จำนวนที่นั่ง :</label>
-        <div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_seat"  value="<?=$row['add_seat']?>" />
+        	<label for="inputEmail3" class="col-sm-2 control-label">เวลาเปิดบริการ:</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm" type="text" name="Add_Day"  value="<?=$row['add_Day']?>" />
     	</div>
 </div> 
  <div class="form-group">
-    	<label for="inputEmail3" class="col-sm-2 control-label">จำนวนโต๊ะ:</label>
-    	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_table"  value="<?=$row['add_table']?>" />
-    	</div>
+ <label for="inputEmail3" class="col-sm-2 control-label">จำนวนที่นั่ง :</label>
+        <div class="col-sm-3">
+      		<input class="form-control input-sm" type="text" name="Add_seat"  value="<?=$row['add_seat']?>" />
+            </div>
         </div>
   <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">รายละเอียดร้าน:</label>
@@ -166,9 +150,24 @@
                 <textarea class="form-control" rows="4" id="comment" name="Add_Notes"> <?=$row['add_Notes']?></textarea>
             </div>
         </div>
-        
+          <div class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">แผนที่:</label>
+    	<div class="col-sm-10">
+      		<div id="map"></div>
+    	</div>
+    </div> 
+    <div class="form-group">
+    	<label for="inputEmail3" class="col-sm-2 control-label">ละติจูล  :</label>
+    	<div class="col-sm-3">
+      		<input class="form-control input-sm" type="text" name="Add_lotitude"  value="<?=$row['add_latitude']?>" />
+    	</div>
+        <label for="inputEmail3" class="col-sm-2 control-label">ลองติจูล:</label>
+        <div class="col-sm-3">
+      		<input class="form-control input-sm" type="text" name="Add_longititude"  value="<?=$row['add_longititude']?>" />
+    	</div>
+</div>
         <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
+            <div class="col-sm-offset-4 col-sm-10">
     
                  <input type="hidden" name='id' value="<?= $id ?>" />
              	 <button type="submit" class="btn btn-primary">บันทึก</button>

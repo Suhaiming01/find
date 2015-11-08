@@ -1,5 +1,8 @@
-
-   <h4>ข้อมูลสมาชิก</h4>
+ 
+ <div class="alert alert-success">
+  <strong><h5 align="center">ข้อมูลสมาชิก </h5></strong>
+</div>
+   
   
   <?php
  $sql= "select * from customers  where cus_id ";

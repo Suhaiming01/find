@@ -19,7 +19,6 @@
       <button type="submit" class="btn btn-primary">ค้นหา</button>
       </form>
       
-      
 	  <div class="navbar-header">
       <ul class="nav nav-pills">
       <img src="images/ftt.png" width="487" height="61" />

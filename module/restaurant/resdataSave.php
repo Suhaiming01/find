@@ -1,18 +1,8 @@
-<?php include("header.php"); ?>
-<?php include("manu1.php"); ?>
-<?php include("manu3.php"); ?>
-<div class=" col-md-9">
-<div class="panel panel-success">
-  <div class="panel-body">
-  
-  
-  
-  
-  <?php if($_GET[res_id]!=''){  $_SESSION[sres_id]=$_GET[res_id]  ;   } 
-	  	//echo "sres_id=".$_SESSION[sres_id];?>
-<?php
+   <?php
 
 	include  'connectdb.php';
+	$id = $_SESSION["cus_user1"];
+	//echo $id;
 	//$objConnect = mysql_connect("localhost","root","405359010") or die("Error Connect to Database");
 	//$objDB = mysql_select_db("mydatabase");
 	/* if($_GET[del]==1){
@@ -22,7 +12,7 @@
 			   mysql_query($sql_del);
 			   
 			}*/
-			$strSQL = "SELECT * FROM restaurant  WHERE res_id = '".$_GET['res_id']."'";
+			$strSQL = "SELECT * FROM restaurant WHERE res_id='$id'";
 				mysql_query("SET character_set_results=utf8");
 				mysql_query("SET character_set_client=utf8");
 				mysql_query("SET character_set_connection=utf8");
@@ -32,15 +22,15 @@
 
 	while($objResult = mysql_fetch_array($objQuery))
 	{?>
-    
-    
- <h4>ข้อมูลการสมัคร</h4> 
- <?php
-	$id = $_SESSION["cus_user1"];
-	$sql = mysql_query("SELECT * FROM restaurant WHERE res_id = '".$_GET['res_id']."'");
-	$row = mysql_fetch_array($sql);
-?>
+     <div class="alert alert-success">
+  <strong><p align="center">ข้อมูลการสมัคร</p></strong>
+</div>
 
+		<?php
+            $id = $_SESSION["cus_user1"];
+            $sql = mysql_query("SELECT * FROM restaurant WHERE res_id='$id'");
+            $row = mysql_fetch_array($sql);
+        ?>
 
 <table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
 <td width="775"><table width="95%" border="0" class="table table-bordered table-striped">
@@ -48,7 +38,9 @@
   
     <td width="30%" height="24" align="right">รูปภาพประจำตัว:</td>
     
-    <td width="70%"align="left"><img src="myfile/<?php echo $objResult["images_res"];?>"></td>
+    <td width="70%"align="left">
+   <img src="myfile/<?= $objResult["images_res"];?>" class="img-rounded" width="110px" height="140px">
+    </td>
   </tr>
    <tr>
     <td height="23" align="right">ชื่อผู้ใช้:</td>
@@ -85,8 +77,9 @@
       }
       ?>
      </table>
+     
       <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-      <a href="listres_Save.php"><button type="reset" class="btn btn-primary">ถอยกลับ</button></a> 
+      <a href="?page=main"><button type="reset" class="btn btn-primary">ถอยกลับ</button></a> 
       </div>
 </div>

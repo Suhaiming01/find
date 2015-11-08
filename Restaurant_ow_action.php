@@ -21,7 +21,7 @@ $day1 = $_POST ['tra_Birthday'];
 
 if(move_uploaded_file($_FILES["filUpload"]["tmp_name"],"myfile/".$_FILES["filUpload"]["name"]))
 
-$sql= "insert into restaurant (res_id,res_user,res_pass,res_Initials,res_name,res_card,res_email,res_phone,res_day,images_res) VALUES('res_id','$username','$password','$Initials','$Res_name','$Res_card','$Res_email','$Res_phone','".$day1."','".$_FILES["filUpload"]["name"]."')";
+$sql= "insert into restaurant (res_id,res_user,res_pass,res_Initials,res_name,res_card,res_email,res_phone,res_day,images_res,register_status) VALUES('res_id','$username','$password','$Initials','$Res_name','$Res_card','$Res_email','$Res_phone','".$day1."','".$_FILES["filUpload"]["name"]."','0')";
 
 
 $qr = mysql_query($sql) or die("ไม่สามารถเพิ่มข้อมูลได้");
@@ -29,7 +29,7 @@ if($qr)
 
 {
 	echo "<script language='javascript'>alert('คุณได้เพิ่มเจ้าของร้านอาหารใหม่เรียบร้อย');</script>";
-			echo "<meta http-equiv='refresh' content='0;URL=./listres_Save.php'>";
+			echo "<meta http-equiv='refresh' content='0;URL=./res_Save.php'>";
 				exit();
 	//echo "<h2 style='color:#CC0066;'>คุณได้เพิ่มเจ้าของร้านอาหารเรียบร้อย</h2>";
 	header("refresh:2;url:listuser.php");

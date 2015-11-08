@@ -40,14 +40,11 @@ if ($_SESSION['cus_user1']=="") {
 				<ul>
                   <li><a href="?page=main">หน้าร้านของฉัน</a></li>
                   <li><a href="?page=restaurantAdd">เพิ่มข้อมูลร้านอาหาร</a></li>
-                  <li><a href="?page=branch">เพิ่มสาขา</a></li>
-                  <li><a href="?page=main_menu">หน้าเมนูอาหาร</a></li>
-                  <li><a href="?page=addmenu_res">เพิ่มเมนูอาหาร</a></li>
                   <li><a href="#">ข่าวสารร้านอาหาร</a></li>
-                   
-				</ul>
+                   </ul>
 			<h4>จัดการข้อมูลเจ้าของร้าน</h4>
 				<ul>
+                  <li><a href="?page=resdataSave">ข้อมูลการสมัคร</a></li>
                   <li><a href="?page=profileEdit_res">แก้ไขข้อมูลส่วนตัว</a></li>
                   <li><a href="?page=res_password">เปลี่ยนรหัสผ่าน</a></li>
                </ul>

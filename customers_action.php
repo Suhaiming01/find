@@ -30,7 +30,7 @@ $qr = mysql_query($sql) or die("ไม่สามารถเพิ่มข้
 if($qr)
 {
 		echo "<script language='javascript'>alert('คุณได้เพิ่มสมาชิกใหม่เรียบร้อย');</script>";
-			echo "<meta http-equiv='refresh' content='0;URL=./listcus_Save.php'>";
+			echo "<meta http-equiv='refresh' content='0;URL=./cus_Save.php'>";
 				exit();
     //echo "<h4 style='color:#CC0066;'>คุณได้เพิ่มสมาชิกใหม่เรียบร้อย</h4>";
 	header("location:listcus_Save.php");

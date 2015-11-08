@@ -22,8 +22,10 @@
 
 	while($objResult = mysql_fetch_array($objQuery))
 	{?>
-    
- <h4>ข้อมูลการสมัคร</h4> 
+    <div class="alert alert-success">
+    <strong><p align="center">ข้อมูลการสมัคร</p></strong>
+    </div>
+ 
 <?php
 	$id = $_SESSION["cus_user1"];
 	$sql = mysql_query("SELECT * FROM customers WHERE cus_id='$id'");
@@ -37,7 +39,9 @@
   
     <td width="30%" height="24" align="right">รูปภาพประจำตัว:</td>
     
-    <td width="70%"align="left"><img src="myfile/<?php echo $objResult["images_cus"];?>"></td>
+    <td width="70%"align="left">
+    <img src="myfile/<?= $objResult["images_cus"];?>" class="img-rounded" width="110px" height="140px">
+    </td>
   </tr>
    <tr>
     <td height="23" align="right">ชื่อผู้ใช้:</td>
@@ -78,3 +82,8 @@
       }
       ?>
       </table>
+       <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+      <a href="index.php"><button type="reset" class="btn btn-primary">ถอยกลับ</button></a> 
+      </div>
+</div>

@@ -22,10 +22,11 @@
 
 	while($objResult = mysql_fetch_array($objQuery))
 	{?>
-    
-    
- <h4>ข้อมูลการสมัครของเจ้าของร้าน</h4></br>
- <?php
+ 
+ <div class="alert alert-success">
+  <strong><h5 align="center">ข้อมูลการสมัครของเจ้าของร้าน</h5></strong>
+</div>  
+    <?php
 	$id = $_SESSION["cus_user1"];
 	$sql = mysql_query("SELECT * FROM restaurant WHERE res_id = '".$_GET['res_id']."'");
 	$row = mysql_fetch_array($sql);
@@ -38,7 +39,9 @@
   
     <td width="30%" height="24" align="right">รูปภาพประจำตัว:</td>
     
-    <td width="70%"align="left"><img src="myfile/<?php echo $objResult["images_res"];?>"></td>
+    <td width="70%"align="left">
+   <img src="myfile/<?= $objResult["images_res"];?>" class="img-rounded" width="110px" height="140px">
+   </td>
   </tr>
    <tr>
     <td height="23" align="right">ชื่อผู้ใช้:</td>
@@ -78,3 +81,5 @@
       <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
       <a href="?page=listres_admin"><button type="reset" class="btn btn-primary">ถอยกลับ</button></a> 
+     
+      </div>

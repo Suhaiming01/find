@@ -8,7 +8,7 @@
 <style>
       #map {
         height: 450px;
-		width:850px;
+		width:865px;
       }
     </style>
     <script>
@@ -78,12 +78,25 @@ function initMap() {
 <div class="panel panel-success">
   <div class="panel-body">
 <!-----map--->
-<img src="images/iioi.jpg" alt="" width="200" height="30" />
+<div class="alert-info">
+  <strong>
+  <h4 align="center">เเผนที่ GPS <img src="module/restaurant/images/Map_65px_1083830_easyicon.net.png" alt="" width="44" height="45" /></h4>
+  </strong>
+</div>
+
+<!---->
 <div id="map"></div>
-   <img src="images/topic_infnews.png" alt="" width="200" height="24" /> 
-   </div>
-  
+<!---->
+<div class="alert-info">
+  <strong>
+  <h4 align="center"><img src="images/topic_infnews.png" alt="" width="200" height="28" /><img src="module/restaurant/images/Female_user_search_64px_1176952_easyicon.net.png" alt="" width="51" height="49" /></h4>
+  </strong>
+</div>
+
+
 </div>
 </div>
+<?php include("footer.php"); ?> 
 </body>
 </html>
+ 

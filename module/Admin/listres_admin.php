@@ -1,5 +1,7 @@
-  
-   <h4>ข้อมูลของร้านอาหาร</h4>
+<div class="alert alert-success">
+  <strong><h5 align="center">ข้อมูลของร้านอาหาร</h5></strong>
+</div>  
+ 
   
   <?php
  $sql= "select * from restaurant  where res_id ";
@@ -15,6 +17,7 @@
 <td width="602"align="center">ชื่อ-นามสกุล</td>
 <td width="602"align="center">เลขบัตรประชาชน</td>
 <td width="602"align="center">วันเกิด</td>
+<td width="602"align="center">สถานะ</td>
 <td width="602"align="center">รายละเอียด</td>
 </tr>
 
@@ -29,6 +32,7 @@ $i=1;
 <td width="602" align="center"><?=$result['res_name']?></td>
 <td width="602" align="center"><?=$result['res_card']?></td>
 <td width="602"align="center"><?=$result['res_day']?></td>
+<td width="602"align="center"><?=$result['register_status']?></td>
 <td width="602"align="center"><a href="?page=resdata_admin&res_id=<?=$result['res_id']?>">ข้อมูล....>></a></td>
 </tr>
 

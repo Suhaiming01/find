@@ -27,7 +27,9 @@ if ($_SESSION['cus_user1']=="") {
 								
 							}
 					?>
-  		</div>
-	</div>
-</div>
-
+  		
+       
+        </div>   
+    </div>
+  </div>
+ 
