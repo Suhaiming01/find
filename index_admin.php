@@ -10,7 +10,8 @@ if ($_SESSION['cus_user1']=="") {
 @session_start();
  include("header.php"); 
  include("manu1.php"); 
- include("home_admin.php"); ?>       
+ include("home_admin.php");      
+ ?>
 
 
 <div class="col-md-9">
@@ -23,12 +24,13 @@ if ($_SESSION['cus_user1']=="") {
 								  case 'adminpassSave' : include 'module/Admin/adminpassSave.php'; break;
 								  case 'listcus_admin' : include 'module/Admin/listcus_admin.php'; break;
 								  case 'cusdata_admin' : include 'module/Admin/cusdata_admin.php'; break;
+								  case 'approval_admin' : include 'module/Admin/approval_admin.php'; break;
 								  case 'listres_admin' : include 'module/Admin/listres_admin.php'; break;
 								  case 'resdata_admin' : include 'module/Admin/resdata_admin.php'; break;
+								  case 'save_status' : include 'module/Admin/save_status.php'; break;
 								
 							}
 					?>
   		</div>
-	</div>
+       </div>
 </div>
-

@@ -10,8 +10,7 @@
   <strong><p align="center">กรุณาเพิ่มร้านอาหารมุสลิมของคุณ</p></strong>
 </div>
        
-        
-       <a href="?page=restaurantAdd"><img src="module/restaurant/images/salam.png"  alt="Responsive image" width="900" height="400" class="img-responsive" /></a>
+         <a href="?page=restaurantAdd"><img src="module/restaurant/images/salam.png"  alt="Responsive image" width="900" height="400" class="img-responsive" /></a>
        
        
        
@@ -28,9 +27,9 @@
 <td width="775"><table width="95%" border="0"  class="table table-hover table-striped">
 <tr class="table-bordered">
             <td width="40" align="center">ลำดับ<a href="?page=restaurantAdd"><img src="images/add_to_photos_48px_1181637_easyicon.net.png" width="32" height="32" /></a></td>
-        	<td width="50" align="center">ชื่อร้านอาหาร</td>
+        	<td width="50" align="center">ชื่อร้าน</td>
             <td width="70" align="center">ประเภทร้านอาหาร</td>
-             <td width="65" align="center">จังหวัด</td>
+             <td width="60" align="center">จังหวัด</td>
              <td width="65" align="center">เมนูอาหาร</td>
              <td width="65" align="center">เพิ่มเมนูอาหาร</td>
             <td width="65" align="center">จัดการ</td>
@@ -43,7 +42,7 @@ $i=1;
 
 		 <tr class="table-bordered">
             <td align="center"><?=$i?></td>
-			<td align="center"><?= $row['add_name'] ?></td>
+			<td align="center"><a href="?page=restaurantSave&id=<?=$id?>"><?= $row['add_name'] ?></a></td>
     		<td align="center"><?= $row['add_type_res'] ?></td>
             <td align="center"><?= $row['province'] ?></td>
             <!---->

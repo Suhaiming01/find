@@ -7,8 +7,9 @@
      <div class="form-group">
     	<label for="inputEmail3" class="col-sm-3 control-label">ชื่อเมนูอาหาร:</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm"  type="text" name="Add_menu" placeholder="ชื่อเมนูอาหาร *"  />
+      		<input class="form-control input-sm"  type="text" name="Add_menu" placeholder="ชื่อเมนูอาหาร"  />
     	</div>
+        <a style="color:#F00">*</a>
   </div>
     
     <div class="form-group">
@@ -24,6 +25,7 @@
                  <option value="เครื่องดื่ม">เครื่องดื่ม</option>
                     </select>
     	</div>
+        <a style="color:#F00">*</a>
   </div>
    
 <div class="form-group">
@@ -31,6 +33,7 @@
     	<div class="col-sm-3">
       		<input class="form-control input-sm" type="file" name="book_picture[]" multiple>
     	</div>
+        <a style="color:#F00">*</a>
   </div>
   
  <div class="form-group">
@@ -38,13 +41,15 @@
     	<div class="col-sm-5">
       		<textarea name="Add_Description" rows="4"  class="form-control" id="comment"></textarea>
     	</div>
+        <a style="color:#F00">*</a>
         </div>
         
          <div class="form-group">
     	<label for="inputEmail3" class="col-sm-3 control-label">ราคา :</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text"  name="Add_price" placeholder="ราคา  *"  />
+      		<input class="form-control input-sm" type="text"  name="Add_price" placeholder="ราคา "  />
     	</div>
+        <a style="color:#F00">*</a>
         </div>
    
    <div class="form-group">

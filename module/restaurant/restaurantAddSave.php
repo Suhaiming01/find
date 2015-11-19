@@ -68,7 +68,7 @@
         if($file_size1 > 2097152){
 			$errors1[]='File size must be less than 2 MB';
         }		
-        $query1="INSERT INTO resimage (add_id,name,type) VALUES('$add_id','$file_name','2'); ";
+        $query1="INSERT INTO resimage (add_id,name,type) VALUES('$add_id','$file_name1','2'); ";
 		// type 1 is gallerry
         $desired_dir1="photo_gallery";
         if(empty($errors1)==true){

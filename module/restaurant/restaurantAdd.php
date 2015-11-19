@@ -25,14 +25,16 @@
   <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">ชื่อร้านอาหาร:</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm"  type="text" name="Add_name" placeholder="ชื่อร้านอาหาร *"  />
+      		<input class="form-control input-sm"  type="text" name="Add_name" placeholder="ชื่อร้านอาหาร"  />
     	</div>
+        <a style="color:#F00">*</a>
   </div>
   
   <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">ประเภทร้าน:</label>
     	<div class="col-sm-3">
       		<select class="form-control input-sm" type="text" name="Add_type">
+                 <option value="ประเภทร้าน">==ประเภทร้านอาหาร==</option>
                  <option value="ร้านอาหารในโรงเเรม รีสอร์ท">ร้านอาหารในโรงเเรม รีสอร์ท</option>
                  <option value="ร้านเค้กเเละเบเกอรี่">ร้านเค้กเเละเบเกอรี่</option>
                  <option value="ร้านชา/กาเเฟ">ร้านชา/กาเเฟ</option>
@@ -42,39 +44,45 @@
                  <option value="ร้านอาหารทั่วไป">ร้านอาหารทั่วไป</option>   
 			</select>
     	</div>
+        <a style="color:#F00">*</a>
   </div>
     <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">เลขทะเบียน:</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_Registration" placeholder="เลขทะเบียนการค้า *"  />
+      		<input class="form-control input-sm" type="text" name="Add_Registration" placeholder="เลขทะเบียนการค้า"  />
     	</div>
         <label for="inputEmail3" class="col-sm-2 control-label">แนบไฟล์:</label>
-    	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="file" name="Add_Registration_file[]" placeholder="เลขทะเบียนการค้า *" multiple/>
+    	
+        <div class="col-sm-3">
+      		<input class="form-control input-sm" type="file" name="Add_Registration_file[]" placeholder="เลขทะเบียนการค้า " multiple/>
     	</div>
+        <a style="color:#F00">*</a>
   	</div>
     <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">รหัสฮาลาล :</label>
         <div class="col-sm-3">
-      		<input class="form-control input-sm" type="text"  name="Add_halal" placeholder="เลขรหัสฮาลาล *"  />
+      		<input class="form-control input-sm" type="text"  name="Add_halal" placeholder="เลขรหัสฮาลาล"  />
     	</div>
+        <a style="color:#F00">*</a>
   	</div>
    <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">รูปภาพ:</label>
     	<div class="col-sm-3">
       		<input class="form-control input-sm" type="file" name="book_picture[]" multiple>
     	</div>
+        <a style="color:#F00">*</a>
   </div>
    <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">บ้านเลขที่:</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text"name="Add_house" placeholder="บ้านเลขที่ *"  />
+        <input class="form-control input-sm" type="text"name="Add_house" placeholder="บ้านเลขที่"  />
+            
     	</div>
         <label for="inputEmail3" class="col-sm-2 control-label">ถนน/ซอย :</label>
         <div class="col-sm-3">
       		<input class="form-control input-sm" type="text" name="Add_road" placeholder="ถนน/ซอย *"  />
     	</div>
- 
+ <a style="color:#F00">*</a>
   </div>
    <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">หมู่ที่ :</label>
@@ -85,7 +93,7 @@
         <div class="col-sm-3">
       		<input class="form-control input-sm" type="text"  name="district" id="district" placeholder="ตำบล *"  />
     	</div>
- 
+ <a style="color:#F00">*</a>
  </div>
    <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">อำเภอ :</label>
@@ -96,12 +104,14 @@
         <div class="col-sm-3">
       		<input class="form-control input-sm" type="text"  name="province" id="province" placeholder="จังหวัด *"  />
     	</div>
+        <a style="color:#F00">*</a>
 	</div>
   	<div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">รหัสไปษณีย์:</label>
     	<div class="col-sm-3">
       		<input class="form-control input-sm" type="text" name="zipcode" id="zipcode" placeholder="รหัสไปษณีย์ *"  />
     	</div>
+        <a style="color:#F00">*</a>
     </div> 
 
  <div class="form-group">
@@ -114,24 +124,28 @@
       		<input class="form-control input-sm" type="text" name="Add_Day" placeholder="เวลาเปิดบริการ*"  />
         
     	</div>
+        <a style="color:#F00">*</a>
 </div> 
  <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">จำนวนที่นั่ง :</label>
         <div class="col-sm-3">
       		<input class="form-control input-sm" type="text" name="Add_seat" placeholder="จำนวนที่นั่ง *" />
     	</div>
+        <a style="color:#F00">*</a>
         </div>
   <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">รายละเอียดร้าน:</label>
     	<div class="col-sm-6">
       		<textarea name="Add_Description" rows="4"  class="form-control" id="comment"></textarea>
     	</div>
+        <a style="color:#F00">*</a>
         </div>
          <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">เว็บไซต์ :</label>
     	<div class="col-sm-3">
       		<input class="form-control input-sm" type="text"  name="Add_web" placeholder="เว็บไซต์  *"  />
     	</div>
+        <a style="color:#F00">*</a>
         </div>
         
         <div class="form-group">
@@ -139,6 +153,7 @@
             <div class="col-sm-6">
                 <textarea class="form-control" rows="4" id="comment" name="Add_Notes" ></textarea>
             </div>
+            <a style="color:#F00">*</a>
         </div>
             
     <div class="form-group">
@@ -146,6 +161,7 @@
     	<div class="col-sm-10">
       		<div id="map"></div>
     	</div>
+        
     </div> 
     
     
@@ -158,6 +174,7 @@
         <div class="col-sm-3">
       		<input class="form-control input-sm" type="text" name="Add_longititude" placeholder="ลองติจูล *"  />
     	</div>
+        <a style="color:#F00">*</a>
 </div>
 </br>
         <div class="form-group">

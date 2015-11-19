@@ -1,4 +1,6 @@
  <?php if($_GET[res_id]!=''){  $_SESSION[sres_id]=$_GET[res_id]  ;   } 
+ 	$res_id = $_GET['res_id'];
+	//echo $res_id;
 	  	//echo "sres_id=".$_SESSION[sres_id];?>
 <?php
 
@@ -78,8 +80,20 @@
       }
       ?>
      </table>
-      <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-      <a href="?page=listres_admin"><button type="reset" class="btn btn-primary">ถอยกลับ</button></a> 
+     <div class="form-group">
+            <div class="col-sm-offset-3 col-sm-10">
+            	<form class="form-horizontal" method="post" enctype="multipart/form-data" action="?page=save_status">
+                	<input type="hidden" name="res_id" value="<?= $res_id ?>" />
+                	<button type="submit" name="save" vale="commit" class="btn btn-primary">ยืนยัน</button>
+           			<button type="submit" name="save" value="uncommit" class="btn btn-primary">ยกเลิก</button>
+                </form>
+           </div>
+  		</div>
      
-      </div>
+     <ul class="pager">
+  <li class="previous"><a href="?page=listres_admin">ถอยกลับ</a></li>
+  </ul>
+  
+  
+ 
+ 

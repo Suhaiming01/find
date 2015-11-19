@@ -35,8 +35,18 @@
 		}else{
 			$_SESSION["cus_user1"] = $row2["res_id"];
 			session_write_close();
+			$res_id = $_SESSION["cus_user1"];
+			$check = mysql_query("SELECT * FROM restaurant WHERE res_id='$res_id'");
+			$rowCheck = mysql_fetch_array($check);
+			$register_status = $rowCheck['register_status'];
+			if($register_status == 0){
+				echo "<script language='javascript'>alert('รอการยืนยันก่อน');</script>";
+				echo "<meta http-equiv='refresh' content='1 ;url=userlogin.php'>";
+				}else{
 			echo "<script language='javascript'>alert('ยินดีต้อนรับเข้าสู่ระบบ');</script>";
 			echo "<meta http-equiv='refresh' content='1 ;url=index_res.php?page=main'>";
+				}
+			//echo "<meta http-equiv='refresh' content='1 ;url=index_res.php?page=main'>";
 		}
 		
 		}else{

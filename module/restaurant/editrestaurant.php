@@ -44,6 +44,7 @@
     	<label for="inputEmail3" class="col-sm-2 control-label">ประเภทร้าน:</label>
     	<div class="col-sm-3">
       		<select class="form-control input-sm" type="text" name="Add_type">
+                <option value="ประเภทร้านอาหาร">==ประเภทร้านอาหาร==</option>
                  <option value="ร้านอาหารในโรงเเรม รีสอร์ท" <?=$row['add_type_res'] == 'ร้านอาหารในโรงเเรม รีสอร์ท' ? ' selected="selected"' : ''?>>ร้านอาหารในโรงเเรม รีสอร์ท</option>
                  <option value="ร้านเค้กเเละเบเกอรี่" <?=$row['add_type_res'] == 'ร้านเค้กเเละเบเกอรี่' ? ' selected="selected"' : ''?>>ร้านเค้กเเละเบเกอรี่</option>
                  <option value="ร้านชา/กาเเฟ" <?=$row['add_type_res'] == 'ร้านชา/กาเเฟ' ? ' selected="selected"' : ''?>>ร้านชา/กาเเฟ</option>

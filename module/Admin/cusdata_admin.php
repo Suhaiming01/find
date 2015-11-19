@@ -84,6 +84,9 @@
       }
       ?>
      </table>
-      <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
-      <a href="?page=listcus_admin"><button type="reset" class="btn btn-primary">ถอยกลับ</button></a> 
+       <ul class="pager">
+  <li class="previous"><a href="?page=listcus_admin">ถอยกลับ</a></li>
+  </ul>
+  
+  
+      

@@ -7,7 +7,7 @@
 	if($check < 1){
 
 ?>
-	<!---imag!--->	
+<!---imag!--->	
     <div class="alert alert-success">
   <strong><p align="center">กรุณาเพิ่มเมนูอาหารของคุณ</p></strong>
 </div>
@@ -20,8 +20,8 @@
 <?php
 		}else{
 ?>
-<!---imag!--->
-<form class="navbar-form navbar-left" method="POST" action="?page=main_menu&id=<?= $add_id ?>">
+
+      <form class="navbar-form navbar-left" method="POST" action="?page=Search_menu&id=<?= $add_id ?>">
         <div class="form-group">
           ค้นหาเมนูอาหาร: <input type="text" name="q" class="form-control" placeholder="ค้นหาเมนูอาหาร" />
         </div>
@@ -33,14 +33,8 @@
   <strong><p align="center">ข้อมูลร้านอาหาร<img src="images/Fast_Food_72px_1183913_easyicon.net.png" width="55" height="55" /></p>
   </strong>
 </div>
-<!---->
-<?php
-	$q = $_POST['q'];
-	$search = mysql_query("SELECT * FROM add_menu WHERE add_menu LIKE '%".$q."%'");
-	$i=1;
-	while($row = mysql_fetch_array($search)){
-?>
-
+     
+ 
 <table width="860" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td width="775"><table width="95%" border="0"  class="table table-hover table-striped">
@@ -52,12 +46,14 @@
              <td width="126" align="center">ราคา</td>
             <td width="245" align="center">จัดการ</td>
       </tr>
+      	
 <!----->
 <?php
 	
 	$search = mysql_query("SELECT * FROM add_menu WHERE add_id='$add_id'");
 	$i=1;
 	while($row = mysql_fetch_array($search)){
+		
 ?>
 <!---->
         
@@ -65,12 +61,12 @@
 
 		<tr class="table-bordered">
             <td align="center"><?=$i?></td>
-			<td align="center"><?= $row['add_menu'] ?></td>
+			<td align="center"><a href="?page=menuSave&id=<?= $row['add_menu_id'] ?>&add_id=<?= $add_id ?>"><?= $row['add_menu'] ?></a></td>
     		<td align="center"><?= $row['add_type_menu'] ?></td>
             <td align="center"><?= $row['add_price'] ?></td>
             <td align="center">
            
-       <a href='?page=editmenu&id=<?= $row['add_menu_id'] ?>'><img src="images/edit.png" width="38" height="37"></a>
+       <a href='?page=editmenu&id=<?= $row['add_menu_id'] ?>&add_id=<?= $add_id ?>'><img src="images/edit.png" width="38" height="37"></a>
                 |
       <a href='?page=delete_menu&id=<?= $row['add_menu_id'] ?>&add_id=<?= $add_id ?>'><img src="images/delete.png" width="36" height="37"></a>
             </td>
@@ -81,7 +77,6 @@ $i++;
 }
  ?>
  </table>
- <?php
-		}
-?>
+
  
+  

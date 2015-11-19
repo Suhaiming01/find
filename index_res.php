@@ -51,6 +51,9 @@ if ($_SESSION['cus_user1']=="") {
 							   case 'editmenu' : include 'module/restaurant/editmenu.php'; break;
 							   case 'editmenuSave' : include 'module/restaurant/editmenuSave.php'; break;
 							   case 'resdataSave' : include 'module/restaurant/resdataSave.php'; break;
+							   case 'Search_menu' : include 'module/restaurant/Search_menu.php'; break;
+							   case 'restaurantSave' : include 'module/restaurant/restaurantSave.php'; break;
+							   case 'menuSave' : include 'module/restaurant/menuSave.php'; break;
 							  
 							}
 

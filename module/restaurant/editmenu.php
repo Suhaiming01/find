@@ -1,5 +1,6 @@
 <?php
     $id= $_GET['id'];
+	$add_id = $_GET['add_id'];
 	$sql = mysql_query("SELECT * FROM add_menu WHERE add_menu_id='$id'");
 	$row = mysql_fetch_array($sql);
 	
@@ -9,7 +10,8 @@
 </div>
 
  <form class="form-horizontal" method="post" enctype="multipart/form-data" action="?page=editmenuSave">	
-  
+                   <input type="hidden" name="add_menu_id" value="<?= $row['add_menu_id'] ?>" />
+                    <input type="hidden" name="id" value="<?= $add_id ?>" />
    <div class="form-group">
     	<label for="inputEmail3" class="col-sm-3 control-label">ชื่อเมนูอาหาร:</label>
     	<div class="col-sm-3">
@@ -56,8 +58,8 @@
    	      <div class="form-group">
             <div class="col-sm-offset-3 col-sm-10">
             
-                 <input type="hidden" name='id' value="<?= $id ?>" />
-             	 <button type="submit" class="btn btn-primary">บันทึก</button>
+                
+                 <button type="submit" class="btn btn-primary">บันทึก</button>
                  <button type="reset" class="btn btn-primary">ยกเลิก</button>
                  
             </div>
