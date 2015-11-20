@@ -5,25 +5,7 @@
 <meta name="viewport" content="initial-scale=1.0">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link href="style.css" rel="stylesheet" type="text/css" />
-<style>
-      #map {
-        height: 450px;
-		width:865px;
-      }
-    </style>
-    <script>
 
-var map;
-function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 6.237006, lng: 101.243813},
-    zoom: 5
-  });
-}
-
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOO7sPpQq0vroi7cvVhtndHM7MUhBhRrk&callback=initMap"
-        async defer></script>
 </head>
 <body>
 <div id="container"> 
@@ -47,7 +29,7 @@ function initMap() {
          </label>
          <input type="password" class="form-control" name="password" placeholder="รหัสผ่าน" required/>
        </p>
-       <button class="btn  btn-primary " type="submit">เข้าสู่ระบบ</button>
+       <button class="btn  btn-primary " type="submit"> <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>  เข้าสู่ระบบ</button>
        <a href="forgot_pass.php">ลืมรหัสผ่าน</a> ____________________________
 </form>
 <SCRIPT LANGUAGE="JavaScript">
@@ -159,18 +141,64 @@ document.write("");
 <!-----map--->
 <div class="alert-info">
   <strong>
-  <h4 align="center">เเผนที่ GPS <img src="module/restaurant/images/Map_65px_1083830_easyicon.net.png" alt="" width="44" height="45" /></h4>
-  </strong>
-</div>
-
-<!---->
-<div id="map"></div>
-<!---->
-<div class="alert-info">
-  <strong>
   <h4 align="center"><img src="images/topic_infnews.png" alt="" width="200" height="28" /><img src="module/restaurant/images/Female_user_search_64px_1176952_easyicon.net.png" alt="" width="51" height="49" /></h4>
   </strong>
 </div>
+
+<!--สาไล-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img/home/01.jpg" width="980" height="380" />
+      <div class="carousel-caption">
+       </div>
+    </div>
+    <div class="item">
+    <img src="img/home/02.jpg" alt="" width="980" height="380" />
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+    <div class="item">
+   <img src="img/home/03.jpg" alt="" width="980" height="380" />
+      <div class="carousel-caption">
+       
+      </div>
+    </div>
+      <div class="item">
+   <img src="img/home/04.jpg" alt="" width="980" height="380" />
+<div class="carousel-caption">
+  
+</div>
+    </div>
+      <div class="item">
+   <img src="img/home/05.jpg" alt="" width="980" height="380" />
+<div class="carousel-caption">
+  
+</div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div></div>
+<!--สาไล-->
+
 
 
 </div>

@@ -48,16 +48,20 @@ a:active {
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="//?page=main">หน้าเเรก</a></li>
+  <li role="presentation" class="active"><a href="//?page=main">  <span class="glyphicon glyphicon-home" aria-hidden="true"></span>   หน้าเเรก</a></li>
+   
+   <li role="presentation"><a href="map_GPS.php"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  GIS</a>
+       </li>
+   
    <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ร้านอาหารมุสลิม<span class="caret"></span></a>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>  ร้านอาหารมุสลิม<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">หน้าหลักร้านอาหาร</a></li>
             <li><a href="#">ร้านอาหารใหม่</a></li>
             <li><a href="#">ข่าวสารร้านอาหาร</a></li>
             </ul>
   <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ประเภทร้านอาหารมุสิม<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-tint" aria-hidden="true"></span>  ประเภทร้านอาหารมุสลิม<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">ร้านอาหารในโรงเเรม รีสอร์ท</a></li>
             <li><a href="#">ร้านเค้กเเละเบเกอรี่</a></li>
@@ -67,18 +71,16 @@ a:active {
             <li><a href="#">ร้านเเวะพักซื้อของฝาก</a></li>
             <li><a href="#">ร้านอาหารทั่วไป</a></li>
             </ul>
-          <li role="presentation"><a href="#">บทความ</a></li>
+          <li role="presentation"><a href="#"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> บทความ</a></li>
              </li>
-             
-       <li role="presentation"><a href="map_GPS.php">เเผนที่ GPS</a>
-       </li>
-        <li role="presentation"><a href="#">ติดต่อเรา</a>
+ 
+        <li role="presentation"><a href="#"> <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>  ติดต่อเรา</a>
        </li>
         <li class="dropdown">
 
-   <li role="presentation" class="active"><a href="logout.php">ออกจากระบบ</a></li>
+   <li role="presentation" class="active"><a href="logout.php"> <span class="glyphicon glyphicon-education" aria-hidden="true"></span>  ออกจากระบบ</a></li>
    <li class="dropdown">   
-   <img src="images/rypng.png" alt="" width="482" height="49" />
+   <img src="images/rypng.png" alt="" width="390" height="43" />
       </ul>
           </ul>
         </li>

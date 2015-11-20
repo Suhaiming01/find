@@ -6,6 +6,77 @@
 			$resimage = mysql_query("SELECT * FROM resimage WHERE add_id='$id' and type='2'");
 ?>
 
+<style>
+      #map_canvas {
+        height: 400px;
+		width:600px;
+      }
+    </style>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiRqDUY4KSI3Wo6iAMp_SqR2FRXet0bP4" type="text/javascript"></script>
+ 		<script type="text/javascript">
+ 			
+			var center = null;
+ 			var map = null;
+ 			var currentPopup;
+ 			var bounds = new google.maps.LatLngBounds();
+ 			function addMarker(lat, lng) {
+
+ 			var icon = new google.maps.MarkerImage("http://maps.google.com/mapfiles/ms/micons/red.png",
+ 			new google.maps.Size(32, 32), new google.maps.Point(0, 0),
+ 			new google.maps.Point(16, 32));
+ 		
+ 				var pt = new google.maps.LatLng(lat, lng);
+ 				bounds.extend(pt);
+ 				var marker = new google.maps.Marker({
+ 					position: pt,
+ 					icon: icon,
+ 					map: map
+ 				});
+ 				var popup = new google.maps.InfoWindow({
+ 				content: info1,
+ 				maxWidth: 300
+ 				});
+ 			google.maps.event.addListener(marker, "click", function() {
+ 				if (currentPopup != null) {
+ 					currentPopup.close();
+					currentPopup = null;
+ 				}
+ 				popup.open(map, marker);
+ 				currentPopup = popup;
+ 			});
+ 			google.maps.event.addListener(popup, "closeclick", function() {
+ 			map.panTo(center);
+ 			currentPopup = null;
+ 			});
+ 			}
+ 			function initMap() {
+ 				map = new google.maps.Map(document.getElementById("map_canvas"), {
+ 				center: new google.maps.LatLng(6.75831, 101.32321),
+ 				zoom: 10,
+ 				mapTypeId: google.maps.MapTypeId.ROADMAP,
+ 				mapTypeControl: true,
+ 				mapTypeControlOptions: {
+ 				style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR 
+ 				},
+ 				navigationControl: true,
+ 				navigationControlOptions: {
+ 				style: google.maps.NavigationControlStyle.SMALL
+ 				}
+ 				});
+ 			
+ 			
+
+
+ 		addMarker(<?=$rowadd_restaurant['add_latitude']?>, <?=$rowadd_restaurant['add_longititude']?>);
+ 		
+ 			
+ 			map.setTilt(45);
+ 			center = bounds.getCenter();
+ 			map.fitBounds(bounds);
+ 
+ 			}
+</script>
+		
 <table width="870" align="center" border="0" cellspacing="0" cellpadding="0">
 <td width="775"><table width="95%" border="0" class="table table-bordered table-striped">
 <tr class="table-bordered">
@@ -90,17 +161,17 @@
     <td height="22" align="right">หมายเหตุ :</td>
     <td><?=$rowadd_restaurant['add_Notes']?></td>
   </tr>
-   <tr>
-    <td height="22" align="right">เเผนที่ :</td>
-    <td><?=$rowadd_restaurant['res_day']?></td>
-  </tr>
   <tr>
     <td height="24" align="right">ละติจูล :</td>
     <td><?= $rowadd_restaurant['add_latitude'] ?></td>
   </tr>
   <tr>
     <td height="22" align="right">ลองติจูล :</td>
-    <td><?=$rowadd_restaurant['add_latitude']?></td>
+    <td><?=$rowadd_restaurant['add_longititude']?></td>
+  </tr>
+  <tr>
+    <td height="22" align="right">เเผนที่ :</td>
+    <td><div id="map_canvas"></div></td>
   </tr>
   
      </table>

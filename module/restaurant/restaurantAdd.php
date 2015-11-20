@@ -1,7 +1,7 @@
 <style>
-      #map {
+      #map_canvas {
         height: 400px;
-		width:520px;
+		width:700px;
       }
     </style>
   <header>
@@ -13,7 +13,73 @@
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
     <script type="text/javascript" src="thaidb/thaidb.js"></script>
     <script type="text/javascript" src="thaidb/thaidb.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOO7sPpQq0vroi7cvVhtndHM7MUhBhRrk&callback=initMap"
+        async defer></script>
+    
+    <script>
+	var marker, myCircle, map;
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(6.362362, 101.4469157);
+        var mapOptions = {
+          zoom: 8,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        map = new google.maps.Map(document.getElementById('map_canvas'), 
+            mapOptions);
+
+        google.maps.event.addListener(map, 'click', function(event){
+                var clickLat = event.latLng.lat();
+                var clickLon = event.latLng.lng();
+
+                document.getElementById("lat").value = event.latLng.lat().toFixed(6);
+                document.getElementById("lon").value = event.latLng.lng().toFixed(6);
+
+            addMarker(clickLat,clickLon);
+           // alert( "Latitude: "+event.latLng.lat()+" "+", longitude: "+event.latLng.lng() );
+        });
+      }
+
+      function addMarker(clickLat,clickLon){       
+        //clear the previous marker and circle.
+        if(marker != null){
+            marker.setMap(null);
+           // myCircle.setMap(null);
+        }
+
+        
+                
+
+
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(clickLat,clickLon),
+            map: map,
+            draggable:false
+        });
+
+
+        
+        //circle options.
+        var circleOptions = {
+            map: map,
+            center: latLng,
+           // radius: 3000
+          };
+         //create circle
+        myCircle = new google.maps.Circle(circleOptions);
+
+        //when marker has completed the drag event 
+        //recenter the circle on the marker.
+        google.maps.event.addListener(marker, 'dragend', function(){
+            myCircle.setCenter(this.position);
+        });     
+    }
+	</script>
+    
+    
   </header>
+  <body onLoad="initialize()">
+  
 <!-----เงื่อนไข-!--->
 <div class="alert alert-success">
   <strong><align="center">เพิ่มข้อมูลร้านอาหาร</strong>* สัญลักษณ์เครื่องหมายดอกจัน คือ ข้อมูลที่จำเป็นต้องระบุ
@@ -49,7 +115,7 @@
     <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">เลขทะเบียน:</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_Registration" placeholder="เลขทะเบียนการค้า"  />
+      		<input class="form-control input-sm" type="text" name="Add_Registration" placeholder="เลขทะเบียนการค้า"/>
     	</div>
         <label for="inputEmail3" class="col-sm-2 control-label">แนบไฟล์:</label>
     	
@@ -159,7 +225,7 @@
     <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">แผนที่:</label>
     	<div class="col-sm-10">
-      		<div id="map"></div>
+      		<div id="map_canvas"></div>
     	</div>
         
     </div> 
@@ -168,11 +234,11 @@
        <div class="form-group">
     	<label for="inputEmail3" class="col-sm-2 control-label">ละติจูล  :</label>
     	<div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_lotitude" placeholder="ละติจูล *"  />
+      		<input class="form-control input-sm" type="text" id='lat' name="Add_lotitude" placeholder="ละติจูล *"  />
     	</div>
         <label for="inputEmail3" class="col-sm-2 control-label">ลองติจูล:</label>
         <div class="col-sm-3">
-      		<input class="form-control input-sm" type="text" name="Add_longititude" placeholder="ลองติจูล *"  />
+      		<input class="form-control input-sm" type="text" id='lon' name="Add_longititude" placeholder="ลองติจูล *"  />
     	</div>
         <a style="color:#F00">*</a>
 </div>
@@ -204,5 +270,6 @@
 		
 		*/
 	</script>
+    </body>
 
   

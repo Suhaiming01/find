@@ -49,16 +49,19 @@ a:active {
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <ul class="nav nav-pills">
-  <li role="presentation" class="active"><a href="index.php">หน้าเเรก</a></li>
+  <li role="presentation" class="active"><a href="index.php"> <span class="glyphicon glyphicon-home" aria-hidden="true"></span>  หน้าเเรก</a></li>
+  <li role="presentation"><a href="map_GPS.php"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>  GIS</a>
+       </li>
+  
    <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ร้านอาหารมุสลิม<span class="caret"></span></a>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-cutlery" aria-hidden="true"></span>  ร้านอาหารมุสลิม<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">หน้าหลักร้านอาหาร</a></li>
             <li><a href="#">ร้านอาหารใหม่</a></li>
             <li><a href="#">ข่าวสารร้านอาหาร</a></li>
             </ul>
   <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">ประเภทร้านอาหารมุสิม<span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-tint" aria-hidden="true"></span>  ประเภทร้านอาหารมุสลิม<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">ร้านอาหารในโรงเเรม รีสอร์ท</a></li>
             <li><a href="#">ร้านเค้กเเละเบเกอรี่</a></li>
@@ -68,25 +71,22 @@ a:active {
             <li><a href="#">ร้านเเวะพักซื้อของฝาก</a></li>
             <li><a href="#">ร้านอาหารทั่วไป</a></li>
             </ul>
-          <li role="presentation"><a href="#">บทความ</a></li>
+          <li role="presentation"><a href="#"> <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> บทความ</a></li>
              </li>
-             
-       <li role="presentation"><a href="map_GPS.php">เเผนที่ GPS</a>
-       </li>
-        <li role="presentation"><a href="#">ติดต่อเรา</a>
+        <li role="presentation"><a href="#"> <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> ติดต่อเรา</a>
        </li>
         <li class="dropdown">
-    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">สมัครสมาชิก<span class="caret"></span></a>
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  สมัครสมาชิก<span class="caret"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="customers.php">สมาชิก</a></li>
-            <li><a href="Restaurant_ow.php">เจ้าของร้านอาหาร</a></li>
+            <li><a href="customers.php">  <span class="glyphicon glyphicon-user" aria-hidden="true"></span>  สมาชิก</a></li>
+            <li><a href="Restaurant_ow.php">  <span class="glyphicon glyphicon-home" aria-hidden="true"></span> เจ้าของร้านอาหาร</a></li>
             
             </ul>
             
-    <li role="presentation" class="active"><a href="userlogin.php" onclick="return confirm('คุณเเน่ใจว่าคุณต้องการเข้าสู่ระบบ');">เข้าสู่ระบบ </a></li>
+    <li role="presentation" class="active"><a href="userlogin.php" onclick="return confirm('คุณเเน่ใจว่าคุณต้องการเข้าสู่ระบบ');"> <span class="glyphicon glyphicon-lock" aria-hidden="true"></span> เข้าสู่ระบบ </a></li>
    <li class="dropdown">
    
-    <li role="presentation" class="active"><a href="logout.php">ออกจากระบบ</a></li>
+    <li role="presentation" class="active"><a href="logout.php"> <span class="glyphicon glyphicon-education" aria-hidden="true"></span>  ออกจากระบบ</a></li>
    <li class="dropdown">
     </ul>
          </ul>
@@ -94,4 +94,4 @@ a:active {
         </ul>
         
     </div>
-    <img src="images/rypng.png" alt="" width="276" height="44" /> </nav>
+    <img src="images/rypng.png" alt="" width="151" height="39" /> </nav>

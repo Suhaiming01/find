@@ -22,7 +22,7 @@ if ($_SESSION['cus_user1']=="") {
     
         <link rel="stylesheet" href="file:///C|/Users/piman/Downloads/css/bootstrap.min.css">
 	<script src="file:///C|/Users/piman/Downloads/.js/bootstrap.min.js"></script>
-<body>
+<body >
 <!-----menu---!-->
 <div class=" col-md-3">
 <div class="panel panel-success">

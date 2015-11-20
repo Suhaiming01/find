@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Google Maps</title>
+    <style>
+    #map_canvas{
+        height:800px;
+        width:800px;
+    }   
+    </style>
+    <script src="https://maps.googleapis.com/maps/api/js?sensor=false">
+    </script>
+    <script>        
+      var marker, myCircle, map;
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(6.362362, 101.4469157);
+        var mapOptions = {
+          zoom: 8,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        map = new google.maps.Map(document.getElementById('map_canvas'), 
+            mapOptions);
+
+        google.maps.event.addListener(map, 'click', function(event){
+                var clickLat = event.latLng.lat();
+                var clickLon = event.latLng.lng();
+
+                document.getElementById("lat").value = event.latLng.lat().toFixed(6);
+                document.getElementById("lon").value = event.latLng.lng().toFixed(6);
+
+            addMarker(clickLat,clickLon);
+           // alert( "Latitude: "+event.latLng.lat()+" "+", longitude: "+event.latLng.lng() );
+        });
+      }
+
+      function addMarker(clickLat,clickLon){       
+        //clear the previous marker and circle.
+        if(marker != null){
+            marker.setMap(null);
+           // myCircle.setMap(null);
+        }
+
+        
+                
+
+
+        marker = new google.maps.Marker({
+            position: new google.maps.LatLng(clickLat,clickLon),
+            map: map,
+            draggable:false
+        });
+
+
+        
+        //circle options.
+        var circleOptions = {
+            map: map,
+            center: latLng,
+           // radius: 3000
+          };
+         //create circle
+        myCircle = new google.maps.Circle(circleOptions);
+
+        //when marker has completed the drag event 
+        //recenter the circle on the marker.
+        google.maps.event.addListener(marker, 'dragend', function(){
+            myCircle.setCenter(this.position);
+        });     
+    }
+    </script>
+  </head>
+  <body onload="initialize()">
+    <div id="map_canvas"></div>
+    Lat: <input type="text" id='lat'>
+    Lon: <input type="text" id='lon'>
+    lat:<span id='lat'></span>
+lon:<span id='lon'></span>
+  </body>
+</html>

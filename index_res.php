@@ -17,17 +17,9 @@ if ($_SESSION['cus_user1']=="") {
  <title>Simple Map</title>
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
-<script>
-	var map;
-	function initMap() {
-	  map = new google.maps.Map(document.getElementById('map'), {
-		center: {lat: 6.237006, lng: 101.243813},
-		zoom: 5
-	  });
-	}
-	</script>
+
 </head>      
-         
+       
  <div class=" col-md-9">
 			<div class="panel panel-success">
   				<div class="panel-body">
